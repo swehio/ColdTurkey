@@ -1,14 +1,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum HintQuality
+{
+    None,
+    Bad,
+    Soso,
+    Good
+}
+
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
 
 
-    [SerializeField] string[] keywords;
-    public Dictionary<string, bool> collectedKeywords = new() { };
-    int collectedKeywordCount;
+    public Dictionary<int, HintQuality> collectedHints = new();
+    int collectedHintCount;
     [SerializeField] int goalKeywordCount = 2;
 
     [SerializeField] GameObject makeBtn;
@@ -24,26 +31,25 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
 
-        Init();
-    }
-
-    private void Init()
-    {
-        foreach (var keyword in keywords)
+        for (int i = 0; i < 10; i++)
         {
-            collectedKeywords.Add(keyword, false);
+            collectedHints.Add(i, HintQuality.None);
         }
     }
 
-    public void CollectKeyword(string keyword)
+
+
+    public void CollectHint(int index, HintQuality quality)
     {
-        if (collectedKeywords.ContainsKey(keyword))
+        if (collectedHints.ContainsKey(index))
         {
-            collectedKeywords[keyword] = true;
+            if (collectedHints[index] == HintQuality.None)
+                collectedHintCount++;
 
-            collectedKeywordCount++;
+            collectedHints[index] = quality;
 
-            if (collectedKeywordCount >= goalKeywordCount)
+
+            if (collectedHintCount >= goalKeywordCount)
             {
                 makeBtn.SetActive(true);
             }

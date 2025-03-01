@@ -1,6 +1,5 @@
-using UnityEngine;
-using EditorAttributes;
 using TMPro;
+using UnityEngine;
 
 public class Ingredients_Text : MonoBehaviour
 {
@@ -15,12 +14,9 @@ public class Ingredients_Text : MonoBehaviour
     {
         string temp = "";
 
-        foreach (string keyword in GameManager.Instance.collectedKeywords.Keys)
+        foreach (var hint in GameManager.Instance.collectedHints.Keys)
         {
-           if( GameManager.Instance.collectedKeywords[keyword])
-            {
-                temp += keyword + "\n";
-            }
+            temp += GameManager.Instance.collectedHints[hint] + "\n";
         }
 
         text.text = temp;

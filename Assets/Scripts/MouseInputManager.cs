@@ -5,10 +5,13 @@ public class MouseInputManager : MonoBehaviour
     InteractableObject interactableObject;
 
     public static bool UseMouseInput = true;
+    public void SetUseMouseInput(bool value) => UseMouseInput = value;
 
     private void Update()
     {
-        if(!UseMouseInput) return;
+        print(UseMouseInput);
+
+        if (!UseMouseInput) return;
 
         ShootRay();
         Interact();
