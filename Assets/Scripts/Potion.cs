@@ -4,17 +4,15 @@ using UnityEngine;
 [System.Serializable]
 public class Potion
 {
-    public string potionName; 
     public Sprite icon; 
-    public Dictionary<string, int> ingredientCounts;
+    public int[] ingredientCounts;
     public bool hasPower; 
     public bool hasPoison;
 
-    public Potion(string name, Sprite potionIcon,  Dictionary<string, int> ingredients, bool power, bool poison)
+    public Potion(Sprite potionIcon,  int[] ingredients, bool power, bool poison)
     {
-        potionName = name;
         icon = potionIcon;
-        ingredientCounts = new Dictionary<string, int>(ingredients);
+        ingredientCounts = ingredients;
         hasPower = power;
         hasPoison = poison;
     }
