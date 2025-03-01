@@ -1,4 +1,3 @@
-using EditorAttributes;
 using System.Collections;
 using System.Text;
 using TMPro;
@@ -9,10 +8,11 @@ using UnityEngine.EventSystems;
 public class Dialogue : MonoBehaviour, IPointerClickHandler
 {
     [SerializeField] DialogueData data;
+    [SerializeField] ResponseOptions[] responseOptions;
     [SerializeField] TextMeshProUGUI text;
     [SerializeField] GameObject nextText;
     int index;
-    float timer;
+    int responseIndex;
 
     WaitForSeconds interval;
     Coroutine coroutine;
@@ -37,7 +37,7 @@ public class Dialogue : MonoBehaviour, IPointerClickHandler
     {
         index = 0;
 
-        interval = new WaitForSeconds(data.Interval);
+        interval = new WaitForSeconds(.1f);
         StartLetterByLetterDialogue();
 
         MouseInputManager.UseMouseInput = false;
@@ -80,6 +80,13 @@ public class Dialogue : MonoBehaviour, IPointerClickHandler
                 text.UpdateGeometry(meshInfo.mesh, i);
             }
         }*/
+
+    public void SetDialogue(DialogueData data)
+    {
+        this.data = data;
+        index = 0;
+        StartLetterByLetterDialogue();
+    }
 
     public void StartDialogue()
     {
@@ -145,7 +152,20 @@ public class Dialogue : MonoBehaviour, IPointerClickHandler
         if (index >= data.Strings.Length)
         {
             onDialogueEnd?.Invoke();
-            gameObject.SetActive(false);
+
+            if (data.HintQuality != HintQuality.None && data.HintQuality != HintQuality.Good)
+            {
+                GameManager.Instance.CollectHint(data.Index, data.HintQuality);
+
+                text.text = "";
+
+                responseOptions[responseIndex].gameObject.SetActive(true);
+
+                responseIndex++;
+            }
+            else
+                gameObject.SetActive(false);
+
             return;
         }
 

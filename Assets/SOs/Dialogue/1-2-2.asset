@@ -10,9 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6f77283b308520b4f87a9c28cd344b00, type: 3}
-  m_Name: DialogueData 3
+  m_Name: 1-2-2
   m_EditorClassIdentifier: 
   <Strings>k__BackingField:
-  - "\uC548\uB155\uC548\uB155!"
-  - "4\uBC88\uC785\uB2C8\uB2E4! \uBC18\uAC11\uC2B5\uB2C8\uB2E4."
-  <Interval>k__BackingField: 0.1
+  - "\uB450\uBC88\uCA30 \uB300\uD654\uC785\uB2C8\uB2E4."
+  - "\uADC0\uCC2E\uAC8C \uD558\uC9C0\uB9C8!"
+  <Index>k__BackingField: 0
+  <HintQuality>k__BackingField: 0
