@@ -32,21 +32,41 @@ public class DraggableItem : MonoBehaviour
 
     private void TryStartDragging()
     {
-        if (EventSystem.current.IsPointerOverGameObject()) return;
+        if (EventSystem.current.IsPointerOverGameObject()) return; 
 
-        RaycastHit2D hit = Physics2D.Raycast(GetMouseWorldPosition(), Vector2.zero);
+        RaycastHit2D[] hits = Physics2D.RaycastAll(GetMouseWorldPosition(), Vector2.zero);
+        RaycastHit2D closestHit = new RaycastHit2D();
+        float closestDistance = Mathf.Infinity;
 
-        if (hit.collider != null && hit.collider.gameObject == gameObject)
+        foreach (RaycastHit2D hit in hits)
         {
-            offset = transform.position - GetMouseWorldPosition();
-            isDragging = true;
+            if (hit.collider != null && hit.collider.gameObject.GetComponent<DraggableItem>() != null)
+            {
+                float distance = Vector2.Distance(hit.point, GetMouseWorldPosition());
+                if (distance < closestDistance)
+                {
+                    closestDistance = distance;
+                    closestHit = hit;
+                }
+            }
         }
+
+        if (closestHit.collider != null)
+        {
+            offset = closestHit.collider.transform.position - GetMouseWorldPosition();
+            closestHit.collider.GetComponent<DraggableItem>().StartDragging(); 
+        }
+    }
+
+    private void StartDragging()
+    {
+        isDragging = true;
     }
 
     private Vector3 GetMouseWorldPosition()
     {
         Vector3 mousePos = Input.mousePosition;
-        mousePos.z = 10f; 
+        mousePos.z = 10f;
         return mainCamera.ScreenToWorldPoint(mousePos);
     }
 }
