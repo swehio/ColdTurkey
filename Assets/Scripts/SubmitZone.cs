@@ -1,10 +1,12 @@
 using UnityEngine;
-using UnityEngine.EventSystems;
 
-public class SubmitZone : MonoBehaviour, IDropHandler
+public class SubmitZone : MonoBehaviour
 {
-    public void OnDrop(PointerEventData eventData)
+    void OnTriggerEnter2D(Collider2D other)
     {
-        
+        if (other.CompareTag("Draggable")) 
+        {
+
+        }
     }
 }
