@@ -4,7 +4,7 @@ public class MouseInputManager : MonoBehaviour
 {
     InteractableObject interactableObject;
 
-    public static bool UseMouseInput;
+    public static bool UseMouseInput = true;
 
     private void Update()
     {
