@@ -10,6 +10,7 @@ public class Dialogue : MonoBehaviour, IPointerClickHandler
 {
     [SerializeField] DialogueData data;
     [SerializeField] TextMeshProUGUI text;
+    [SerializeField] GameObject nextText;
     int index;
     float timer;
 
@@ -17,9 +18,14 @@ public class Dialogue : MonoBehaviour, IPointerClickHandler
     Coroutine coroutine;
 
     public bool IsReadToGoNext { get; private set; }
+    void SetIsReadToGoNext(bool value)
+    {
+        IsReadToGoNext = value;
+        nextText.SetActive(value);
+    }
 
 
-    [SerializeField] UnityEvent onDialogueEnd;
+    public UnityEvent onDialogueEnd;
 
 
     private void Awake()
@@ -34,7 +40,13 @@ public class Dialogue : MonoBehaviour, IPointerClickHandler
         interval = new WaitForSeconds(data.Interval);
         StartLetterByLetterDialogue();
 
+        MouseInputManager.UseMouseInput = false;
+    }
+    private void OnDisable()
+    {
+        onDialogueEnd.RemoveAllListeners();
 
+        MouseInputManager.UseMouseInput = true;
     }
 
     /*    private void Update()
@@ -91,7 +103,7 @@ public class Dialogue : MonoBehaviour, IPointerClickHandler
     {
         text.text = "";
 
-        IsReadToGoNext = false;
+        SetIsReadToGoNext(false);
 
         StringBuilder currentText = new();
         string sentence = data.Strings[index];
@@ -107,7 +119,7 @@ public class Dialogue : MonoBehaviour, IPointerClickHandler
                 yield return interval;
         }
 
-        IsReadToGoNext = true;
+        SetIsReadToGoNext(true);
 
         index++;
         coroutine = null;
@@ -124,11 +136,10 @@ public class Dialogue : MonoBehaviour, IPointerClickHandler
     private void SetText()
     {
         text.text = data.Strings[index];
-        IsReadToGoNext = true;
+        SetIsReadToGoNext(true);
         index++;
     }
 
-    [Button]
     public void Interact()
     {
         if (index >= data.Strings.Length)

@@ -18,7 +18,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &742605815667140523
 RectTransform:
   m_ObjectHideFlags: 0
@@ -92,6 +92,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: 9e56266a0ad3fff4b87152da6f4a72d1, type: 2}
   text: {fileID: 368670183807629947}
+  nextText: {fileID: 5560776513975578894}
   onDialogueEnd:
     m_PersistentCalls:
       m_Calls: []
@@ -107,12 +108,12 @@ GameObject:
   - component: {fileID: 2548186539397000780}
   - component: {fileID: 8736399850334085564}
   m_Layer: 5
-  m_Name: Skip
+  m_Name: Next
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2501936787814017282
 RectTransform:
   m_ObjectHideFlags: 0
@@ -160,7 +161,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Skip
+  m_text: Next ->
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a0f22431699e4ec459e456cab0c7f1d9, type: 2}
   m_sharedMaterial: {fileID: 7047570260746688449, guid: a0f22431699e4ec459e456cab0c7f1d9, type: 2}
