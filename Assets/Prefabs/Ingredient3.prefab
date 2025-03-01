@@ -103,7 +103,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f2a075d1c663c34d8199d7c415f9ab9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ingredientName: Ingredient3
+  ingredientNum: 2
   description: 
 --- !u!114 &8943247711376217797
 MonoBehaviour:

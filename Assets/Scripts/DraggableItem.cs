@@ -1,39 +1,52 @@
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class DraggableObject : MonoBehaviour
+public class DraggableItem : MonoBehaviour
 {
     private Vector3 offset;
-    private bool isDragging = false;
     private Camera mainCamera;
+    private bool isDragging = false;
 
     void Start()
     {
         mainCamera = Camera.main;
     }
 
-    void OnMouseDown()
+    void Update()
     {
-        offset = transform.position - GetMouseWorldPosition();
-        isDragging = true;
-    }
+        if (Input.GetMouseButtonDown(0))
+        {
+            TryStartDragging();
+        }
 
-    void OnMouseDrag()
-    {
         if (isDragging)
         {
             transform.position = GetMouseWorldPosition() + offset;
         }
+
+        if (Input.GetMouseButtonUp(0))
+        {
+            isDragging = false;
+        }
     }
 
-    void OnMouseUp()
+    private void TryStartDragging()
     {
-        isDragging = false;
+        if (EventSystem.current.IsPointerOverGameObject()) return;
+
+        RaycastHit2D hit = Physics2D.Raycast(GetMouseWorldPosition(), Vector2.zero);
+
+        if (hit.collider != null && hit.collider.gameObject == gameObject)
+        {
+            offset = transform.position - GetMouseWorldPosition();
+            isDragging = true;
+        }
     }
 
-    Vector3 GetMouseWorldPosition()
+    private Vector3 GetMouseWorldPosition()
     {
         Vector3 mousePos = Input.mousePosition;
-        mousePos.z = 0f; 
+        mousePos.z = 10f; 
         return mainCamera.ScreenToWorldPoint(mousePos);
     }
 }
