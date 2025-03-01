@@ -9,8 +9,6 @@ public class MouseInputManager : MonoBehaviour
 
     private void Update()
     {
-        print(UseMouseInput);
-
         if (!UseMouseInput) return;
 
         ShootRay();
