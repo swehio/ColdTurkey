@@ -13,6 +13,7 @@ public class PotionCraftingSystem : MonoBehaviour
     public void SetPower(bool value) => hasPower = value;
     public void SetPoison(bool value) => hasPoison = value;
 
+    private List<GameObject> spawnedIngredients = new List<GameObject>();
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -22,6 +23,8 @@ public class PotionCraftingSystem : MonoBehaviour
         {
             selectedIngredients[ingredient.ingredientNum]++; 
             Debug.Log($"{ingredient.ingredientNum}이(가) 추가됨! 총 개수: {selectedIngredients[ingredient.ingredientNum]}");
+
+            spawnedIngredients.Add(other.gameObject);
         }
     }
 
@@ -46,6 +49,24 @@ public class PotionCraftingSystem : MonoBehaviour
         Potion craftedPotion = new Potion(randomSprite, selectedIngredients, hasPower, hasPoison);
 
         DisplayPotionObject(craftedPotion);
+
+        ClearIngredients();
+    }
+
+    private void ClearIngredients()
+    {
+
+        while (spawnedIngredients.Count > 0)
+        {
+            GameObject ingredient = spawnedIngredients[0]; 
+            if (ingredient != null)
+            {
+                Destroy(ingredient);
+            }
+            spawnedIngredients.RemoveAt(0); 
+        }
+
+        Debug.Log("모든 재료가 제거되었습니다!");
     }
 
     private Sprite GetRandomSprite()
@@ -57,7 +78,7 @@ public class PotionCraftingSystem : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("⚠ 랜덤 스프라이트 배열이 비어 있습니다!");
+            Debug.LogWarning("랜덤 스프라이트 배열이 비어 있습니다!");
             return null;
         }
     }
@@ -66,7 +87,7 @@ public class PotionCraftingSystem : MonoBehaviour
     {
         if (potionPrefab == null || potionSpawnPoint == null)
         {
-            Debug.LogError("⚠ Error: potionPrefab 또는 potionSpawnPoint가 설정되지 않았습니다!");
+            Debug.LogError("Error: potionPrefab 또는 potionSpawnPoint가 설정되지 않았습니다!");
             return;
         }
 
@@ -77,10 +98,8 @@ public class PotionCraftingSystem : MonoBehaviour
         {
             potionDisplay.SetPotionData(potion); 
         }
-        else
-        {
-            Debug.LogWarning("⚠ PotionPrefab에 PotionDisplay 스크립트가 없습니다!");
-        }
     }
+
+
 
 }
