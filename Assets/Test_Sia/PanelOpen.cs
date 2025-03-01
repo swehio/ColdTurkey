@@ -45,12 +45,12 @@ public class PanelOpen : MonoBehaviour
     public void CloseSaveMenu()
     {
         savePanel.SetActive(false);
-        blockerPanel.SetActive(false); // ´ÝÈú ¶§ Â÷´Ü ÇØÁ¦
+        blockerPanel.SetActive(false); 
     }
     // Á¾·á Ã¢ ´Ý±â
     public void CloseExitMenu()
     {
         exitPanel.SetActive(false);
-        blockerPanel.SetActive(false); // ´ÝÈú ¶§ Â÷´Ü ÇØÁ¦
+        blockerPanel.SetActive(false); 
     }
 }
