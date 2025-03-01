@@ -157,8 +157,6 @@ public class Dialogue : MonoBehaviour, IPointerClickHandler
             {
                 GameManager.Instance.CollectHint(data.Index, data.HintQuality);
 
-                text.text = "";
-
                 responseOptions[responseIndex].gameObject.SetActive(true);
 
                 responseIndex++;
