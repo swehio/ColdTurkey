@@ -1,10 +1,10 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class IngredientSpawner : MonoBehaviour
 {
     public GameObject ingredientPrefab;
     public Transform spawnPoint;
-    public float spawnRadius = 1f;
+    public float spawnRadius = 20f;
 
     public void SetIngredientPrefab(GameObject newPrefab)
     {
@@ -15,8 +15,9 @@ public class IngredientSpawner : MonoBehaviour
     {
         if (ingredientPrefab != null && spawnPoint != null)
         {
-            Vector2 safeSpawnPosition = FindSafeSpawnPosition();
-            GameObject newIngredient = Instantiate(ingredientPrefab, spawnPoint.position, Quaternion.identity);
+            Vector2 spawnPosition = GetRandomSpawnPosition(spawnPoint.position, spawnRadius);
+
+            GameObject newIngredient = Instantiate(ingredientPrefab, spawnPosition, Quaternion.identity);
         }
     }
 
@@ -41,4 +42,11 @@ public class IngredientSpawner : MonoBehaviour
         return spawnPoint.position;
     }
 
+    private Vector2 GetRandomSpawnPosition(Vector2 center, float spawnRadius)
+    {
+        Vector2 randomOffset = Random.insideUnitCircle * spawnRadius; 
+        Vector2 newSpawnPosition = center + randomOffset; 
+
+        return newSpawnPosition;
+    }
 }
