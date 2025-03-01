@@ -37,6 +37,7 @@ public class Hint : InteractableObject
         base.OnPointerClick();
         dialogue.gameObject.SetActive(true);
         outline.enabled = false;
+
     }
 
 }

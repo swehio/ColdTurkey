@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f77283b308520b4f87a9c28cd344b00, type: 3}
   m_Name: DialogueData 2
   m_EditorClassIdentifier: 
+  <Keyword>k__BackingField: "\uC7AC\uB8CC3"
   <Strings>k__BackingField:
   - "\uC548\uB155\uC548\uB155!"
   - "3\uBC88\uC785\uB2C8\uB2E4! \uBC18\uAC11\uC2B5\uB2C8\uB2E4."

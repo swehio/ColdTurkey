@@ -144,6 +144,8 @@ public class Dialogue : MonoBehaviour, IPointerClickHandler
     {
         if (index >= data.Strings.Length)
         {
+            GameManager.Instance.CollectKeyword(data.Keyword);
+
             onDialogueEnd?.Invoke();
             gameObject.SetActive(false);
             return;
