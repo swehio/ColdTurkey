@@ -43,7 +43,6 @@ public class ResponseOptions : MonoBehaviour
 
     public void SetDialogue(int index)
     {
-        print(index);
         dialogue.SetDialogue(results[index]);
     }
 }

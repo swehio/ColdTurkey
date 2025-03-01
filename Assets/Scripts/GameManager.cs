@@ -46,6 +46,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] Potion potion;
     public void SetPotion(Potion potion) => this.potion = potion;
     Result[] results = new Result[2];
+    public Result GetResult() => results[CurrentStage];
 
     private void Awake()
     {
@@ -93,8 +94,6 @@ public class GameManager : MonoBehaviour
 
         if (CurrentStage == 0)
         {
-            CurrentStage++;
-
             passFails[0] = potion.ingredientCounts[0] >= 3 && potion.ingredientCounts[0] < 6;
             passFails[1] = true;
             passFails[2] = potion.ingredientCounts[2] >= 1 && potion.ingredientCounts[2] <= 3;
