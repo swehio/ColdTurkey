@@ -4,8 +4,12 @@ public class MouseInputManager : MonoBehaviour
 {
     InteractableObject interactableObject;
 
+    public static bool UseMouseInput;
+
     private void Update()
     {
+        if(!UseMouseInput) return;
+
         ShootRay();
         Interact();
     }
