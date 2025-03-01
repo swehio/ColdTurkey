@@ -1,8 +1,6 @@
-using System.Collections.Generic;
 using UnityEngine;
 
-[System.Serializable]
-public class Potion
+public class Potion 
 {
     public Sprite icon; 
     public int[] ingredientCounts;
@@ -16,4 +14,5 @@ public class Potion
         hasPower = power;
         hasPoison = poison;
     }
+
 }

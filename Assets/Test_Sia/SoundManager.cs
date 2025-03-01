@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class SoundManager : MonoBehaviour
 {
@@ -13,6 +14,11 @@ public class SoundManager : MonoBehaviour
     [SerializeField] private Slider masterSlider;
     [SerializeField] private Slider bgmSlider;
     [SerializeField] private Slider sfxSlider;
+
+    [Header("📊 볼륨 값 표시 텍스트")]
+    [SerializeField] private TMP_Text masterValueText;
+    [SerializeField] private TMP_Text bgmValueText;
+    [SerializeField] private TMP_Text sfxValueText;
 
     private float masterVolume = 1f;
     private float bgmVolume = 1f;
@@ -34,7 +40,7 @@ public class SoundManager : MonoBehaviour
 
     private void Start()
     {
-        // 🔥 저장된 볼륨 값 불러오기
+        // 저장된 볼륨 값 불러오기
         masterVolume = PlayerPrefs.GetFloat("MasterVolume", 1f);
         bgmVolume = PlayerPrefs.GetFloat("BGMVolume", 1f);
         sfxVolume = PlayerPrefs.GetFloat("SFXVolume", 1f);
@@ -46,8 +52,9 @@ public class SoundManager : MonoBehaviour
 
         // 볼륨 설정 적용
         ApplyVolume();
+        UpdateVolumeTexts();
 
-        // 🎛 슬라이더 값 변경 시 볼륨 업데이트
+        // 슬라이더 값 변경 시 볼륨 업데이트
         masterSlider.onValueChanged.AddListener(SetMasterVolume);
         bgmSlider.onValueChanged.AddListener(SetBGMVolume);
         sfxSlider.onValueChanged.AddListener(SetSFXVolume);
@@ -69,7 +76,8 @@ public class SoundManager : MonoBehaviour
         masterVolume = volume;
         PlayerPrefs.SetFloat("MasterVolume", volume);
         PlayerPrefs.Save();
-        ApplyVolume();  // 🔥 즉시 볼륨 적용
+        ApplyVolume();  // 즉시 볼륨 적용
+        UpdateVolumeTexts(); // 볼륨 변경 시 숫자도 업데이트
     }
 
     public void SetBGMVolume(float volume)
@@ -78,8 +86,9 @@ public class SoundManager : MonoBehaviour
         PlayerPrefs.SetFloat("BGMVolume", volume);
         PlayerPrefs.Save();
         ApplyVolume();
+        UpdateVolumeTexts();
 
-        
+
     }
 
     public void SetSFXVolume(float volume)
@@ -88,6 +97,7 @@ public class SoundManager : MonoBehaviour
         PlayerPrefs.SetFloat("SFXVolume", volume);
         PlayerPrefs.Save();
         ApplyVolume();
+        UpdateVolumeTexts();
     }
 
     public void PlaySFX(AudioClip clip)
@@ -98,5 +108,12 @@ public class SoundManager : MonoBehaviour
             sfxSource.clip = clip;
             sfxSource.Play();  //Play()는 즉시 재생됨
         }
+    }
+    // 📊 볼륨 값을 숫자로 변환하여 UI 업데이트
+    private void UpdateVolumeTexts()
+    {
+        masterValueText.text = Mathf.RoundToInt(masterVolume * 100).ToString();
+        bgmValueText.text = Mathf.RoundToInt(bgmVolume * 100).ToString();
+        sfxValueText.text = Mathf.RoundToInt(sfxVolume * 100).ToString();
     }
 }

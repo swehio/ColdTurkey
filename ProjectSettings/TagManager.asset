@@ -5,14 +5,15 @@ TagManager:
   serializedVersion: 3
   tags:
   - Draggable
+  - Potion
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - NonClickableCollider
   - Water
   - UI
-  - 
+  - IgnoreSpawn
   - 
   - 
   - 
