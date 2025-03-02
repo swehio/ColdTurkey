@@ -696,6 +696,7 @@ GameObject:
   - component: {fileID: 1209737512}
   - component: {fileID: 1209737513}
   - component: {fileID: 1209737514}
+  - component: {fileID: 1209737515}
   m_Layer: 5
   m_Name: IntroText
   m_TagString: Untagged
@@ -829,33 +830,48 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1209737508}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7a8648eb288b12e4eb78d7b1b69d5bf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   isInteractable: 1
-  defaultData: {fileID: 0}
-  endDialogueData: {fileID: 0}
+  defaultData: {fileID: 11400000, guid: 75c0395e77d02e34d85d869528177096, type: 2}
+  endDialogueData: {fileID: 11400000, guid: 75c0395e77d02e34d85d869528177096, type: 2}
   responseOptions: {fileID: 0}
   text: {fileID: 1209737513}
   nextText: {fileID: 430561586}
   dontResetMouseinput: 0
   onDialogueEnd:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1809777947}
-        m_TargetAssemblyTypeName: FadeManager, Assembly-CSharp
-        m_MethodName: LoadSceneWithFade
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 1_YSA_MainTitle
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
+--- !u!114 &1209737515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1209737508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f51a1176e789f304295639850f55c289, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collectedHintCount: 9
+  results: 0000000000000000
+  dialogueDatas:
+  - {fileID: 11400000, guid: 75c0395e77d02e34d85d869528177096, type: 2}
+  - {fileID: 11400000, guid: ac9f170a07928c14abba16fce2b2de66, type: 2}
+  - {fileID: 11400000, guid: cf277aa4776caf747be0352671cde6be, type: 2}
+  - {fileID: 11400000, guid: 150397173b1645f468bd5e4cf91e5fd4, type: 2}
+  - {fileID: 11400000, guid: eac8f3b7c7aa4a048833ee6ff3f3580d, type: 2}
+  - {fileID: 11400000, guid: 8798842e9880dba4f90d58fcaeb2891e, type: 2}
+  - {fileID: 11400000, guid: fb4676882feebe14cb807ea15be7cc5f, type: 2}
+  - {fileID: 11400000, guid: 09ec1cb05697cb046a6dc6fe2af2c5a5, type: 2}
+  - {fileID: 11400000, guid: ac34c653f84bc2e4a8c03af807e15dd8, type: 2}
+  - {fileID: 11400000, guid: a063f6bcbc432d04f86ad7d054ceec35, type: 2}
+  - {fileID: 11400000, guid: d119c2550f07e114bb0c4306edfb3208, type: 2}
+  - {fileID: 11400000, guid: 7195b6c46c0546d4381d3933e8621bca, type: 2}
 --- !u!1 &1729440800
 GameObject:
   m_ObjectHideFlags: 0

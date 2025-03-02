@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: ending_normal_2
   m_EditorClassIdentifier: 
   <Strings>k__BackingField:
-  - "normal_3\n\n\uB354 \uC774\uC0C1 \uC9C4\uC2E4\uC740 \uC911\uC694\uD558\uC9C0
+  - "normal_2\n\n\uB354 \uC774\uC0C1 \uC9C4\uC2E4\uC740 \uC911\uC694\uD558\uC9C0
     \uC54A\uC2B5\uB2C8\uB2E4.\n\uD669\uC81C\uC758 \uD3B8\uC5D0\uC11C \uC5F0\uD569\uC758
     \uC8FC\uCD95\uC744 \uC774\uB8E8\uB358\n\uCE74\uC790\uB4DC\uB460, \uC548\uB204\uBBF8\uB098\uC2A4\n\n\uB450
     \uAE30\uB465\uC774 \uBAA8\uB450 \uBB34\uB108\uC9C0\uBA70\n\uC81C\uAD6D\uC740
@@ -31,5 +31,5 @@ MonoBehaviour:
   - 
   - 
   - 
-  <Index>k__BackingField: 0
+  <Index>k__BackingField: -1
   <HintQuality>k__BackingField: 0
