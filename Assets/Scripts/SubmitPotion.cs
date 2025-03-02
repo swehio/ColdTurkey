@@ -1,18 +1,12 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class PotionReceiver : MonoBehaviour
+public class SubmitPotion : MonoBehaviour
 {
     //  public GameManager gameManager;
 
-    public GameObject noPotionUI;
+    public Text noPotionText;
     private PotionDisplay currentPotion;
-
-    private void Start()
-    {
-        if (noPotionUI != null)
-            noPotionUI.SetActive(false);
-    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -31,16 +25,9 @@ public class PotionReceiver : MonoBehaviour
             else
             {
                 Debug.LogWarning("잘못된 아이템이 감지되었습니다!");
-                if (noPotionUI != null)
+                if (noPotionText != null)
                 {
-                    noPotionUI.SetActive(true);
-                    Text messageText = noPotionUI.GetComponentInChildren<Text>();
-
-                    if (messageText != null)
-                    {
-                        messageText.text = "약이 아닙니다!";
-                    }
-                    Invoke("HideNoPotionUI", 2f);
+                    noPotionText.text =  "약이 아닙니다!";
                 }
             }
         }
@@ -79,23 +66,11 @@ public class PotionReceiver : MonoBehaviour
         }
         else
         {
-            if (noPotionUI != null)
+            if (noPotionText != null)
             {
-                noPotionUI.SetActive(true);
-                Text messageText = noPotionUI.GetComponentInChildren<Text>();
-
-                if (messageText != null)
-                {
-                    messageText.text = "제출할 약이 없습니다!";
-                }
-                Invoke("HideNoPotionUI", 2f);
+                noPotionText.text = "제출할 약이 없습니다!";
             }
         }
     }
 
-    private void HideNoPotionUI()
-    {
-        if (noPotionUI != null)
-            noPotionUI.SetActive(false);
-    }
 }
