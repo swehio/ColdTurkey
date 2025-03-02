@@ -48,6 +48,6 @@ public class IntroTextManager : MonoBehaviour
 
         //  모든 텍스트 출력 후 자동으로 씬 이동
         yield return new WaitForSeconds(2f);
-        SceneManager.LoadScene("3_YSA_Menu"); // 다음 씬으로 이동하는 코드 추가 가능
+        SceneManager.LoadScene("3_YSA_MenuPopup"); // 다음 씬으로 이동하는 코드 추가 가능, 이거 지금 메뉴 테스트씬이니까 나중에 바로 인게임씬으로 옮기기
     }
 }

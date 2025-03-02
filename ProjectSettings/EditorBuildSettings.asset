@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Test_Sia/2_YSA_Intro.unity
     guid: fb05678e9189cf24f99c16aaad2440d3
   - enabled: 1
-    path: Assets/Test_Sia/3_YSA_Menu.unity
+    path: Assets/Test_Sia/3_YSA_MenuPopup.unity
     guid: b5981368712c1cf4eb6348a9bfff4e9f
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
