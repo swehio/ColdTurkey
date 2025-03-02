@@ -8,7 +8,10 @@ public enum HintQuality
     None,
     Bad,
     Soso,
-    Good
+    Good,
+
+    Add,
+    DontAdd
 }
 
 public enum Result
@@ -76,10 +79,13 @@ public class GameManager : MonoBehaviour
     {
         if (collectedHints.ContainsKey(index))
         {
-            if (collectedHints[index] == HintQuality.None)
+            if (quality == HintQuality.None)
                 collectedHintCount++;
-
-            collectedHints[index] = quality;
+            else if (quality == HintQuality.Add)
+            {
+                collectedHints[index] = collectedHints[index] + 1;
+                print(collectedHints[index]);
+            }
 
 
             if (collectedHintCount >= goalKeywordCount)

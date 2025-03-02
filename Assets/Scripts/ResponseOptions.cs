@@ -1,3 +1,5 @@
+using NUnit.Framework;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -10,6 +12,9 @@ public class ResponseOptions : MonoBehaviour
 
     [SerializeField] Responses responses;
     [SerializeField] DialogueData[] results;
+    [SerializeField] DialogueData repeatDialogue;
+
+    List<int> finishedDialogueIndexs = new (4);
 
     private void Awake()
     {
@@ -43,6 +48,21 @@ public class ResponseOptions : MonoBehaviour
 
     public void SetDialogue(int index)
     {
+        dialogue.isInteractable = true;
+
+        if (index == results.Length - 1)
+        {
+            dialogue.SetDialogue(results[index]);
+            return;
+        }
+
+        if(finishedDialogueIndexs.Contains(index))
+        {
+            dialogue.SetDialogue(repeatDialogue);
+            return;
+        }
         dialogue.SetDialogue(results[index]);
+
+        finishedDialogueIndexs.Add(index);
     }
 }

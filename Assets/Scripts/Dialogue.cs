@@ -7,12 +7,17 @@ using UnityEngine.EventSystems;
 
 public class Dialogue : MonoBehaviour, IPointerClickHandler
 {
-    [SerializeField] DialogueData data;
-    [SerializeField] ResponseOptions[] responseOptions;
+    public bool isInteractable = true;
+
+    [SerializeField] DialogueData defaultData;
+    [SerializeField] DialogueData endDialogueData;
+    bool isFirstTime = true;
+    DialogueData currentData;
+
+    [SerializeField] ResponseOptions responseOptions;
     [SerializeField] TextMeshProUGUI text;
     [SerializeField] GameObject nextText;
     int index;
-    int responseIndex;
 
     WaitForSeconds interval;
     Coroutine coroutine;
@@ -36,6 +41,10 @@ public class Dialogue : MonoBehaviour, IPointerClickHandler
     private void OnEnable()
     {
         index = 0;
+
+        currentData = isFirstTime ? defaultData : endDialogueData;
+
+        isFirstTime = false;
 
         interval = new WaitForSeconds(.1f);
         StartLetterByLetterDialogue();
@@ -83,7 +92,7 @@ public class Dialogue : MonoBehaviour, IPointerClickHandler
 
     public void SetDialogue(DialogueData data)
     {
-        this.data = data;
+        this.currentData = data;
         index = 0;
         StartLetterByLetterDialogue();
     }
@@ -113,10 +122,18 @@ public class Dialogue : MonoBehaviour, IPointerClickHandler
         SetIsReadToGoNext(false);
 
         StringBuilder currentText = new();
-        string sentence = data.Strings[index];
+        string sentence = currentData.Strings[index];
 
         for (int charIndex = 0; charIndex < sentence.Length; charIndex++)
         {
+            if (char.IsPunctuation(sentence[charIndex]) &&
+                 sentence[charIndex] != '.' && sentence[charIndex] != '.'
+                 && sentence[charIndex] != '?')
+            {
+                currentText.Append(sentence[charIndex]);
+                continue;
+            }
+
             currentText.Append(sentence[charIndex]);
             text.text = currentText.ToString();
 
@@ -142,27 +159,30 @@ public class Dialogue : MonoBehaviour, IPointerClickHandler
 
     private void SetText()
     {
-        text.text = data.Strings[index];
+        text.text = currentData.Strings[index];
         SetIsReadToGoNext(true);
         index++;
     }
 
     public void Interact()
     {
-        if (index >= data.Strings.Length)
+        if (index >= currentData.Strings.Length)
         {
-            onDialogueEnd?.Invoke();
-
-            if (data.HintQuality != HintQuality.None && data.HintQuality != HintQuality.Good)
+            if (currentData.HintQuality != HintQuality.None)
             {
-                GameManager.Instance.CollectHint(data.Index, data.HintQuality);
+                GameManager.Instance.CollectHint(currentData.Index, currentData.HintQuality);
 
-                responseOptions[responseIndex].gameObject.SetActive(true);
+                responseOptions.gameObject.SetActive(true);
 
-                responseIndex++;
+                isInteractable = false;
+
+                index = 0;
             }
             else
+            {
+                onDialogueEnd?.Invoke();
                 gameObject.SetActive(false);
+            }
 
             return;
         }
@@ -175,6 +195,7 @@ public class Dialogue : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        Interact();
+        if (isInteractable)
+            Interact();
     }
 }
