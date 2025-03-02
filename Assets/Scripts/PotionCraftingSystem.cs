@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PotionCraftingSystem : MonoBehaviour
 {
@@ -9,11 +10,29 @@ public class PotionCraftingSystem : MonoBehaviour
     public GameObject potionPrefab; // 제조된 약 프리팹
     public Transform potionSpawnPoint; // 약 생성 위치
     public Sprite[] potionSprites;
+    public Text[] ingredientsInfo;
+    public Image[] spriteImages;
 
-    public void SetPower(bool value) => hasPower = value;
-    public void SetPoison(bool value) => hasPoison = value;
+    public Color activeColor = Color.white;
+    public Color inactiveColor = Color.gray;
+
+    public void SetPower()
+    {
+        hasPower = !hasPower;
+        UpdateIngredientsInfo();
+    }
+    public void SetPoison()
+    {
+        hasPoison = !hasPoison;
+        UpdateIngredientsInfo();
+    }
 
     private List<GameObject> spawnedIngredients = new List<GameObject>();
+
+    private void Start()
+    {
+        UpdateIngredientsInfo();
+    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -25,6 +44,7 @@ public class PotionCraftingSystem : MonoBehaviour
             Debug.Log($"{ingredient.ingredientNum}이(가) 추가됨! 총 개수: {selectedIngredients[ingredient.ingredientNum]}");
 
             spawnedIngredients.Add(other.gameObject);
+            UpdateIngredientsInfo();
         }
     }
 
@@ -38,8 +58,38 @@ public class PotionCraftingSystem : MonoBehaviour
             {
                 selectedIngredients[ingredient.ingredientNum]--;
                 Debug.Log($"{ingredient.ingredientNum} 개수 감소! 남은 개수: {selectedIngredients[ingredient.ingredientNum]}");
+
+                UpdateIngredientsInfo();
             }
         }
+    }
+
+    public void UpdateIngredientsInfo()
+    {
+        for(int i = 0; i< ingredientsInfo.Length; i++)
+        {
+            if (ingredientsInfo[i] == null) 
+            {
+                continue;
+            }
+
+            Text infoText = ingredientsInfo[i].GetComponentInChildren<Text>();
+
+            if (infoText != null)
+            {
+                infoText.text = selectedIngredients[i].ToString();
+            }
+        }
+
+        if (spriteImages.Length < 2)
+        {
+            Debug.LogError("⚠ Sprite 배열 크기가 2보다 작습니다!");
+            return;
+        }
+
+        spriteImages[0].color = hasPower ? activeColor : inactiveColor;  
+        spriteImages[1].color = hasPoison ? activeColor : inactiveColor; 
+
     }
 
     public void CraftPotion()
@@ -53,7 +103,7 @@ public class PotionCraftingSystem : MonoBehaviour
         ClearIngredients();
     }
 
-    private void ClearIngredients()
+    public void ClearIngredients()
     {
 
         while (spawnedIngredients.Count > 0)
@@ -66,7 +116,12 @@ public class PotionCraftingSystem : MonoBehaviour
             spawnedIngredients.RemoveAt(0); 
         }
 
-        Debug.Log("모든 재료가 제거되었습니다!");
+        hasPower = false; 
+        hasPoison = false;
+
+        UpdateIngredientsInfo();
+
+    Debug.Log("모든 재료가 제거되었습니다!");
     }
 
     private Sprite GetRandomSprite()

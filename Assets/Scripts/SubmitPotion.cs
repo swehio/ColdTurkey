@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class PotionReceiver : MonoBehaviour
 {
@@ -16,9 +17,30 @@ public class PotionReceiver : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Potion")) 
+        if (other.CompareTag("Draggable"))
         {
-            currentPotion = other.gameObject;
+            PotionDisplay potionDisplay = other.GetComponent<PotionDisplay>();
+
+            if (potionDisplay != null)
+            {
+                currentPotion = other.gameObject;
+                Debug.Log($"포션 감지됨: {currentPotion.name}");
+            }
+            else 
+            {
+                Debug.LogWarning("잘못된 아이템이 감지되었습니다!");
+                if (noPotionUI != null)
+                {
+                    noPotionUI.SetActive(true);
+                    Text messageText = noPotionUI.GetComponentInChildren<Text>();
+
+                    if (messageText != null)
+                    {
+                        messageText.text = "약이 아닙니다!"; 
+                    }
+                    Invoke("HideNoPotionUI", 2f); 
+                }
+            }
         }
     }
 
@@ -48,7 +70,13 @@ public class PotionReceiver : MonoBehaviour
         {
             if (noPotionUI != null)
             {
-                noPotionUI.SetActive(true); 
+                noPotionUI.SetActive(true);
+                Text messageText = noPotionUI.GetComponentInChildren<Text>();
+
+                if (messageText != null)
+                {
+                    messageText.text = "제출할 약이 없습니다!";
+                }
                 Invoke("HideNoPotionUI", 2f); 
             }
         }
