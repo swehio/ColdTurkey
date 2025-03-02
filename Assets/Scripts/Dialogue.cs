@@ -30,6 +30,7 @@ public class Dialogue : MonoBehaviour, IPointerClickHandler
         nextText.SetActive(value);
     }
 
+    [SerializeField] bool dontResetMouseinput;
 
     public UnityEvent onDialogueEnd;
 
@@ -57,7 +58,8 @@ public class Dialogue : MonoBehaviour, IPointerClickHandler
     {
         onDialogueEnd.RemoveAllListeners();
 
-        MouseInputManager.UseMouseInput = true;
+        if (!dontResetMouseinput)
+            MouseInputManager.UseMouseInput = true;
     }
 
     /*    private void Update()

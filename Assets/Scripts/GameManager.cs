@@ -40,6 +40,7 @@ public class GameManager : MonoBehaviour
     [Header(" - Hint - ")]
     public Dictionary<int, HintQuality> collectedHints = new();
     int collectedHintCount;
+    public int GetCollectedHintCount() => collectedHintCount; 
     public void AddCollectecHintCount(int collectedHintCount) => this.collectedHintCount += collectedHintCount;
     [SerializeField] int goalKeywordCount = 2;
 

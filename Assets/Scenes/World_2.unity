@@ -677,6 +677,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 360459162026078529, guid: 6f22d746e8764ee449d92189d789052d, type: 3}
   m_PrefabInstance: {fileID: 337000663}
   m_PrefabAsset: {fileID: 0}
+--- !u!223 &337000665 stripped
+Canvas:
+  m_CorrespondingSourceObject: {fileID: 4147419442654684783, guid: 6f22d746e8764ee449d92189d789052d, type: 3}
+  m_PrefabInstance: {fileID: 337000663}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &422625634 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1681068944193182528, guid: a2643950fba24b04f97784ee357a00e2, type: 3}
@@ -776,6 +781,10 @@ PrefabInstance:
       propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 807476051275291679, guid: 51f67118421724c4fa786a24c3a24631, type: 3}
+      propertyPath: craftCanvas
+      value: 
+      objectReference: {fileID: 337000665}
     - target: {fileID: 1422517743042076951, guid: 51f67118421724c4fa786a24c3a24631, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -862,7 +871,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3931180584618655502, guid: 51f67118421724c4fa786a24c3a24631, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4317371277274211842, guid: 51f67118421724c4fa786a24c3a24631, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -898,6 +907,14 @@ PrefabInstance:
       objectReference: {fileID: 1155369521}
     - target: {fileID: 7457041982443063000, guid: 51f67118421724c4fa786a24c3a24631, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 337000664}
+    - target: {fileID: 7653894022435856087, guid: 51f67118421724c4fa786a24c3a24631, type: 3}
+      propertyPath: onDialogueEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 337000664}
+    - target: {fileID: 7701124338956524203, guid: 51f67118421724c4fa786a24c3a24631, type: 3}
+      propertyPath: onDialogueEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 337000664}
     m_RemovedComponents: []
