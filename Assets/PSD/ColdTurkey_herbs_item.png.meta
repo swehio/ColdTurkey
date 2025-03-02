@@ -484,7 +484,22 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ColdTurkey_herbs_item_0: 4302381036036854651
+      ColdTurkey_herbs_item_1: -1189400234747942914
+      ColdTurkey_herbs_item_10: 6351671929122932350
+      ColdTurkey_herbs_item_11: -5938842537373484799
+      ColdTurkey_herbs_item_12: 220477974514191829
+      ColdTurkey_herbs_item_13: -25855822206220960
+      ColdTurkey_herbs_item_14: 2121744772824667767
+      ColdTurkey_herbs_item_2: 4864109522516845900
+      ColdTurkey_herbs_item_3: 8371092302268469968
+      ColdTurkey_herbs_item_4: 595526322638017919
+      ColdTurkey_herbs_item_5: -718778618942197026
+      ColdTurkey_herbs_item_6: -3402406440816919123
+      ColdTurkey_herbs_item_7: 2639748560937298163
+      ColdTurkey_herbs_item_8: -7451494142430484914
+      ColdTurkey_herbs_item_9: -428367576219648231
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
