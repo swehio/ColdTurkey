@@ -19,7 +19,7 @@ public class SceneTransition : MonoBehaviour
         if (!isTransitioning)
         {
             isTransitioning = true;
-            SceneManager.LoadScene("3_YSA_Menu"); // 🚀 특정 씬으로 전환
+            SceneManager.LoadScene("3_YSA_Menu"); // 특정 씬으로 전환
         }
     }
 }
