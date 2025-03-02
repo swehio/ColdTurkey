@@ -1,92 +1,84 @@
 ﻿using System.Collections;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class FadeManager : MonoBehaviour
 {
-    public static FadeManager instance;
-    private Image fadePanel;
-    [SerializeField] private float fadeDuration = 1f;
+    public static FadeManager Instance; // 싱글톤 패턴 적용
+
+    [Header("페이드 UI")]
+    public GameObject fadePanel; // 검은색 패널 오브젝트
+    public Image fadeImage; // 페이드 효과를 줄 이미지
+    public float fadeDuration = 1f; // 페이드 효과 지속 시간
 
     private void Awake()
     {
-        if (instance == null)
+        // 싱글톤 패턴 적용 (씬 전환 시에도 유지)
+        if (Instance == null)
         {
-            instance = this;
-            DontDestroyOnLoad(gameObject);
+            Instance = this;
+            DontDestroyOnLoad(gameObject); // ✅ FadeManager 유지
         }
         else
         {
             Destroy(gameObject);
             return;
         }
+
+        DontDestroyOnLoad(fadePanel); // ✅ FadePanel도 유지되도록 설정
+        fadePanel.SetActive(true); // ✅ 처음에는 활성화 (페이드인 진행)
     }
 
     private void Start()
     {
-        FindFadePanel(); // 씬이 시작될 때 fadePanel을 찾음
-        StartCoroutine(FadeIn());
+        StartCoroutine(FadeIn()); // 씬 시작 시 페이드인 효과 적용
     }
 
-    private void FindFadePanel()
+    public void LoadSceneWithFade(string sceneName)
     {
-        GameObject panelObj = GameObject.Find("FadePanel"); // FadePanel 다시 찾기
-        if (panelObj != null)
-        {
-            fadePanel = panelObj.GetComponent<Image>();
-            fadePanel.gameObject.SetActive(true);
-        }
-        else
-        {
-            Debug.LogError("FadePanel을 찾을 수 없습니다. 씬에 FadePanel이 있는지 확인하세요!");
-        }
+        StartCoroutine(FadeOutAndChangeScene(sceneName));
     }
 
-    public void FadeOutAndLoadScene(string sceneName)
+    IEnumerator FadeOutAndChangeScene(string sceneName)
     {
-        StartCoroutine(FadeOutAndLoad(sceneName));
-    }
-
-    private IEnumerator FadeOutAndLoad(string sceneName)
-    {
-        FindFadePanel(); // 씬이 바뀔 때마다 FadePanel을 다시 찾음
-
-        if (fadePanel == null) yield break; // fadePanel이 없으면 실행 중지
-
-        fadePanel.gameObject.SetActive(true);
+        fadePanel.SetActive(true); // ✅ 씬 변경 전 패널 활성화
         yield return StartCoroutine(FadeOut());
 
-        yield return SceneManager.LoadSceneAsync(sceneName);
+        SceneManager.LoadScene(sceneName);
+        yield return new WaitForSeconds(0.1f); // 씬이 완전히 로드될 시간을 약간 줌
 
-        FindFadePanel(); // 새로운 씬에서 fadePanel 다시 찾기
         yield return StartCoroutine(FadeIn());
+        fadePanel.SetActive(false); // ✅ 페이드인 완료 후 비활성화
     }
 
-    private IEnumerator FadeOut()
+    IEnumerator FadeOut()
     {
-        float timer = 0f;
-        while (timer < fadeDuration)
+        float elapsedTime = 0f;
+        Color fadeColor = fadeImage.color;
+
+        while (elapsedTime < fadeDuration)
         {
-            timer += Time.deltaTime;
-            float alpha = Mathf.Lerp(0f, 1f, timer / fadeDuration);
-            if (fadePanel != null)
-                fadePanel.color = new Color(0f, 0f, 0f, alpha);
+            elapsedTime += Time.deltaTime;
+            fadeColor.a = Mathf.Clamp01(elapsedTime / fadeDuration);
+            fadeImage.color = fadeColor;
             yield return null;
         }
     }
 
-    private IEnumerator FadeIn()
+    IEnumerator FadeIn()
     {
-        float timer = 0f;
-        while (timer < fadeDuration)
+        float elapsedTime = 0f;
+        Color fadeColor = fadeImage.color;
+
+        while (elapsedTime < fadeDuration)
         {
-            timer += Time.deltaTime;
-            float alpha = Mathf.Lerp(1f, 0f, timer / fadeDuration);
-            if (fadePanel != null)
-                fadePanel.color = new Color(0f, 0f, 0f, alpha);
+            elapsedTime += Time.deltaTime;
+            fadeColor.a = 1f - Mathf.Clamp01(elapsedTime / fadeDuration);
+            fadeImage.color = fadeColor;
             yield return null;
         }
-        if (fadePanel != null) fadePanel.gameObject.SetActive(false);
+
+        fadePanel.SetActive(false); // ✅ 페이드인 끝나면 패널 비활성화
     }
 }
