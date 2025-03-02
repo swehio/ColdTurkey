@@ -3,7 +3,6 @@
 public class Hint : InteractableObject
 {
     [SerializeField] Dialogue dialogue;
-    [SerializeField] SpriteRenderer outline;
 
     private void OnEnable()
     {
@@ -23,20 +22,20 @@ public class Hint : InteractableObject
     public override void OnPointerEnter()
     {
         base.OnPointerEnter();
-        outline.enabled = true;
+        transform.localScale = Vector3.one;
     }
 
     public override void OnPointerExit()
     {
         base.OnPointerExit();
-        outline.enabled = false;
+        transform.localScale = Vector3.one * .75f;
     }
 
     public override void OnPointerClick()
     {
         base.OnPointerClick();
         dialogue.gameObject.SetActive(true);
-        outline.enabled = false;
+        transform.localScale = Vector3.one * .75f;
 
     }
 
