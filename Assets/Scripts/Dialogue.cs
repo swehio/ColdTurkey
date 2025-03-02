@@ -22,6 +22,7 @@ public class Dialogue : MonoBehaviour, IPointerClickHandler
     WaitForSeconds interval;
     Coroutine coroutine;
 
+
     public bool IsReadToGoNext { get; private set; }
     void SetIsReadToGoNext(bool value)
     {
@@ -36,6 +37,7 @@ public class Dialogue : MonoBehaviour, IPointerClickHandler
     private void Awake()
     {
         if (!text) text = GetComponentInChildren<TextMeshProUGUI>();
+
     }
 
     private void OnEnable()

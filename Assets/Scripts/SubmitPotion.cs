@@ -20,12 +20,6 @@ public class PotionReceiver : MonoBehaviour
         {
             if (other.TryGetComponent(out currentPotion))
             {
-                for (int i = 0; i < currentPotion.potionData.ingredientCounts.Length; i++)
-                {
-                    print(currentPotion.potionData.ingredientCounts[i]);
-                }
-
-
                 Debug.Log($"포션 감지됨: {currentPotion.name}");
             }
             else
@@ -62,17 +56,12 @@ public class PotionReceiver : MonoBehaviour
 
             if (PotionData != null)
             {
-                for (int i = 0; i < PotionData.ingredientCounts.Length; i++)
-                {
-                    print(PotionData.ingredientCounts[i]);
-                }
-
 
                 Debug.Log($"Potion 제출됨!");
                 GameManager.Instance.SetPotion(PotionData);
                 GameManager.Instance.MakeResult();
-                // Destroy(currentPotion);
-                // currentPotion = null;
+                 Destroy(currentPotion);
+                 currentPotion = null;
 
                 GetComponentInParent<Canvas>().gameObject.SetActive(false);
             }
