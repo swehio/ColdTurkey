@@ -7,7 +7,7 @@ public class PanelOpen : MonoBehaviour
     public GameObject exitPanel; // 종료 패널
     public GameObject blockerPanel; // 전체 클릭 차단 패널
     public GameObject menuPanel; // 메뉴 패널
-    public GameObject InblockerPanel; // 내부 클릭 차단 패널 (메뉴 내 버튼용)
+
 
     // ========== 타이틀 버튼 ========== 
     public void ToggleOptionMenu()
@@ -45,19 +45,7 @@ public class PanelOpen : MonoBehaviour
     }
 
     // ========== 메뉴 내부 버튼 ========== 
-    public void MenuOptionMenu()
-    {
-        bool isActive = !optionPanel.activeSelf;
-        blockerPanel.SetActive(isActive); // ✅ 전체 클릭 차단
-        optionPanel.SetActive(isActive);
-    }
-
-    public void MenuExitMenu()
-    {
-        bool isActive = !exitPanel.activeSelf;
-        blockerPanel.SetActive(isActive); // ✅ 전체 클릭 차단
-        exitPanel.SetActive(isActive);
-    }
+ 
 
     // ========== 패널 닫기 버튼 ========== 
     public void CloseOptionMenu()

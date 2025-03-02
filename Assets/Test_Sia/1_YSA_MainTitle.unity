@@ -209,7 +209,19 @@ MonoBehaviour:
   m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 925751557}
+        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
+        m_MethodName: SetSFXVolume
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &74584634
 GameObject:
   m_ObjectHideFlags: 0
@@ -770,8 +782,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: b38b371d1b7d2a34f80f80c45fb5d3ec, type: 3}
-  m_Resource: {fileID: 8300000, guid: b38b371d1b7d2a34f80f80c45fb5d3ec, type: 3}
+  m_audioClip: {fileID: 8300000, guid: b3a403089ad377841b2dcd80d2105d6f, type: 3}
+  m_Resource: {fileID: 8300000, guid: b3a403089ad377841b2dcd80d2105d6f, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -942,7 +954,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1983582831}
         m_TargetAssemblyTypeName: PanelOpen, Assembly-CSharp
-        m_MethodName: ToggleSaveMenu
+        m_MethodName: ToggleHowtoMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2305,7 +2317,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1983582831}
         m_TargetAssemblyTypeName: PanelOpen, Assembly-CSharp
-        m_MethodName: CloseSaveMenu
+        m_MethodName: CloseHowtoMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2728,6 +2740,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bgmSource: {fileID: 182291162}
   sfxSource: {fileID: 1086530808}
+  titleBGM: {fileID: 8300000, guid: b3a403089ad377841b2dcd80d2105d6f, type: 3}
+  introBGM: {fileID: 8300000, guid: b3a403089ad377841b2dcd80d2105d6f, type: 3}
+  menuBGM: {fileID: 8300000, guid: 24d62eccf30e1b5479f4ff5a9a4b32df, type: 3}
   masterSlider: {fileID: 1696287725}
   bgmSlider: {fileID: 1112036833}
   sfxSlider: {fileID: 15906186}
@@ -3366,7 +3381,19 @@ MonoBehaviour:
   m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 925751557}
+        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
+        m_MethodName: SetBGMVolume
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1119681786
 GameObject:
   m_ObjectHideFlags: 0
@@ -4640,7 +4667,19 @@ MonoBehaviour:
   m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 925751557}
+        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
+        m_MethodName: SetMasterVolume
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1701499708
 GameObject:
   m_ObjectHideFlags: 0
@@ -5008,7 +5047,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   optionPanel: {fileID: 676236245}
-  savePanel: {fileID: 1119681786}
+  HowtoPanel: {fileID: 1119681786}
   exitPanel: {fileID: 1366223453}
   blockerPanel: {fileID: 1296814506}
   menuPanel: {fileID: 0}

@@ -6,6 +6,12 @@ TagManager:
   tags:
   - Draggable
   - Potion
+  - MasterSlider
+  - BGMSlider
+  - SFXSlider
+  - MasterValueText
+  - BGMValueText
+  - SFXValueText
   layers:
   - Default
   - TransparentFX
