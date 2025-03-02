@@ -97,11 +97,19 @@ public class PotionCraftingSystem : MonoBehaviour
     {
         if(selectedIngredients.Length > 0)
         {
-            Sprite randomSprite = GetRandomSprite();
+            Sprite StageSprite;
+            if (GameManager.Instance.CurrentStage == 0)
+            {
+                StageSprite = potionSprites[0];
+            }
+            else
+            {
+                StageSprite = potionSprites[1];
+            }
 
             int[] temp = new int[5];
             selectedIngredients.CopyTo(temp, 0);
-            Potion craftedPotion = new Potion(randomSprite, temp, hasPower, hasPoison);
+            Potion craftedPotion = new Potion(StageSprite, temp, hasPower, hasPoison);
 
             DisplayPotionObject(craftedPotion);
 

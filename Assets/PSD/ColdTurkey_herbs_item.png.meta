@@ -1,0 +1,507 @@
+fileFormatVersion: 2
+guid: df0ceb6b620dc6b49903c38e5dae73d1
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4302381036036854651
+    second: ColdTurkey_herbs_item_0
+  - first:
+      213: -1189400234747942914
+    second: ColdTurkey_herbs_item_1
+  - first:
+      213: 4864109522516845900
+    second: ColdTurkey_herbs_item_2
+  - first:
+      213: 8371092302268469968
+    second: ColdTurkey_herbs_item_3
+  - first:
+      213: 595526322638017919
+    second: ColdTurkey_herbs_item_4
+  - first:
+      213: -718778618942197026
+    second: ColdTurkey_herbs_item_5
+  - first:
+      213: -3402406440816919123
+    second: ColdTurkey_herbs_item_6
+  - first:
+      213: 2639748560937298163
+    second: ColdTurkey_herbs_item_7
+  - first:
+      213: -7451494142430484914
+    second: ColdTurkey_herbs_item_8
+  - first:
+      213: -428367576219648231
+    second: ColdTurkey_herbs_item_9
+  - first:
+      213: 6351671929122932350
+    second: ColdTurkey_herbs_item_10
+  - first:
+      213: -5938842537373484799
+    second: ColdTurkey_herbs_item_11
+  - first:
+      213: 220477974514191829
+    second: ColdTurkey_herbs_item_12
+  - first:
+      213: -25855822206220960
+    second: ColdTurkey_herbs_item_13
+  - first:
+      213: 2121744772824667767
+    second: ColdTurkey_herbs_item_14
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ColdTurkey_herbs_item_0
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 1012
+        width: 17
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b739a5dd1c025bb30800000000000000
+      internalID: 4302381036036854651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ColdTurkey_herbs_item_1
+      rect:
+        serializedVersion: 2
+        x: 790
+        y: 1012
+        width: 17
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef72518c9c66e7fe0800000000000000
+      internalID: -1189400234747942914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ColdTurkey_herbs_item_2
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 823
+        width: 265
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c45263ee6d9c08340800000000000000
+      internalID: 4864109522516845900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ColdTurkey_herbs_item_3
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 981
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d218b2d8181c2470800000000000000
+      internalID: 8371092302268469968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ColdTurkey_herbs_item_4
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 790
+        width: 271
+        height: 197
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f75db33090cb34800800000000000000
+      internalID: 595526322638017919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ColdTurkey_herbs_item_5
+      rect:
+        serializedVersion: 2
+        x: 711
+        y: 821
+        width: 236
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed2fdc187a26606f0800000000000000
+      internalID: -718778618942197026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ColdTurkey_herbs_item_6
+      rect:
+        serializedVersion: 2
+        x: 709
+        y: 879
+        width: 10
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dad3b996e5938c0d0800000000000000
+      internalID: -3402406440816919123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ColdTurkey_herbs_item_7
+      rect:
+        serializedVersion: 2
+        x: 663
+        y: 859
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f82407845542a420800000000000000
+      internalID: 2639748560937298163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ColdTurkey_herbs_item_8
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 839
+        width: 9
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e46e682ae89f69890800000000000000
+      internalID: -7451494142430484914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ColdTurkey_herbs_item_9
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 521
+        width: 271
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91ff12285f12e0af0800000000000000
+      internalID: -428367576219648231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ColdTurkey_herbs_item_10
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 505
+        width: 293
+        height: 217
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e76413987fba52850800000000000000
+      internalID: 6351671929122932350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ColdTurkey_herbs_item_11
+      rect:
+        serializedVersion: 2
+        x: 709
+        y: 494
+        width: 286
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 109bfd67d2ef49da0800000000000000
+      internalID: -5938842537373484799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ColdTurkey_herbs_item_12
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 67
+        width: 295
+        height: 352
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5dd47b7bc8b4f0300800000000000000
+      internalID: 220477974514191829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ColdTurkey_herbs_item_13
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 67
+        width: 295
+        height: 352
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 065c506444424aff0800000000000000
+      internalID: -25855822206220960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ColdTurkey_herbs_item_14
+      rect:
+        serializedVersion: 2
+        x: 749
+        y: 109
+        width: 207
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 776914021a3f17d10800000000000000
+      internalID: 2121744772824667767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      ColdTurkey_herbs_item_0: 4302381036036854651
+      ColdTurkey_herbs_item_1: -1189400234747942914
+      ColdTurkey_herbs_item_10: 6351671929122932350
+      ColdTurkey_herbs_item_11: -5938842537373484799
+      ColdTurkey_herbs_item_12: 220477974514191829
+      ColdTurkey_herbs_item_13: -25855822206220960
+      ColdTurkey_herbs_item_14: 2121744772824667767
+      ColdTurkey_herbs_item_2: 4864109522516845900
+      ColdTurkey_herbs_item_3: 8371092302268469968
+      ColdTurkey_herbs_item_4: 595526322638017919
+      ColdTurkey_herbs_item_5: -718778618942197026
+      ColdTurkey_herbs_item_6: -3402406440816919123
+      ColdTurkey_herbs_item_7: 2639748560937298163
+      ColdTurkey_herbs_item_8: -7451494142430484914
+      ColdTurkey_herbs_item_9: -428367576219648231
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
