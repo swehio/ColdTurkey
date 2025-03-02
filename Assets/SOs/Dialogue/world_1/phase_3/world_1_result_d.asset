@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f77283b308520b4f87a9c28cd344b00, type: 3}
   m_Name: world_1_result_d
   m_EditorClassIdentifier: 
-  <Strings>k__BackingField: []
+  <Strings>k__BackingField:
+  - "\uCE74\uC790\uB4DC\uB460\uC744 \uB5A0\uB098\uACE0 \uBA70\uCE60 \uB4A4\n\uD68C\uBCF5\uC138\uB97C
+    \uBCF4\uC774\uB358 \uC601\uC8FC\uAC00\n\uAC11\uC790\uAE30 \uC138\uC0C1\uC744
+    \uB5A0\uB0AC\uB2E4\uB294 \uC18C\uC2DD\uC744 \uC811\uD588\uB2E4.\n\n\n"
   <Index>k__BackingField: 0
   <HintQuality>k__BackingField: 0
