@@ -2,11 +2,13 @@
 
 public class IngredientSpawner : MonoBehaviour
 {
-    public GameObject ingredientPrefab;
+    [SerializeField] PotionCraftingSystem craftingSystem;
+
+    public Ingredient ingredientPrefab;
     public Transform spawnPoint;
     public float spawnRadius = 20f;
 
-    public void SetIngredientPrefab(GameObject newPrefab)
+    public void SetIngredientPrefab(Ingredient newPrefab)
     {
         ingredientPrefab = newPrefab;
     }
@@ -17,7 +19,9 @@ public class IngredientSpawner : MonoBehaviour
         {
             Vector2 spawnPosition = GetRandomSpawnPosition(spawnPoint.position, spawnRadius);
 
-            GameObject newIngredient = Instantiate(ingredientPrefab, spawnPosition, Quaternion.identity);
+            var newIngredient = Instantiate(ingredientPrefab, spawnPosition, Quaternion.identity);
+
+            craftingSystem.selectedIngredients[newIngredient.ingredientNum]++;
         }
     }
 
