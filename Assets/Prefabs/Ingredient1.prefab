@@ -104,7 +104,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingredientNum: 0
-  description: 
+  description: "\uD0DC\uC591\uC744 \uC0BC\uD0A4\uB294 \uC0AC\uC790\uC758 \uD53C\uB97C
+    \uBA38\uAE08\uC740 \uC57D\uCD08 \u2018\uC544\uBBF8\uD55C\u2019\uC73C\uB85C \uB9CC\uB4E0
+    \uC57D\uC7AC, \uB4DC\uC6CC\uD504\uC5D0\uAC8C \uD6A8\uACFC\uC801"
 --- !u!114 &3364795798704488719
 MonoBehaviour:
   m_ObjectHideFlags: 0

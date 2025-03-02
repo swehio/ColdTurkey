@@ -126,14 +126,6 @@ public class Dialogue : MonoBehaviour, IPointerClickHandler
 
         for (int charIndex = 0; charIndex < sentence.Length; charIndex++)
         {
-            if (char.IsPunctuation(sentence[charIndex]) &&
-                 sentence[charIndex] != '.' && sentence[charIndex] != '!'
-                 && sentence[charIndex] != '?' && sentence[charIndex] != ',')
-            {
-                currentText.Append(sentence[charIndex]);
-                continue;
-            }
-
             currentText.Append(sentence[charIndex]);
             text.text = currentText.ToString();
 
@@ -168,10 +160,10 @@ public class Dialogue : MonoBehaviour, IPointerClickHandler
     {
         if (index >= currentData.Strings.Length)
         {
+            GameManager.Instance.CollectHint(currentData.Index, currentData.HintQuality);
+
             if (currentData.HintQuality != HintQuality.None)
             {
-                GameManager.Instance.CollectHint(currentData.Index, currentData.HintQuality);
-
                 responseOptions.gameObject.SetActive(true);
 
                 isInteractable = false;
