@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class ResultCanvas : MonoBehaviour
 {
-    [SerializeField] TextMeshProUGUI text;
     [SerializeField] DialogueData[] dialogueDatas;
     [SerializeField] Dialogue dialogue;
 
@@ -20,7 +19,5 @@ public class ResultCanvas : MonoBehaviour
         dialogue.gameObject.SetActive(true);
         dialogue.enabled = true;
 
-        // TEST
-        text.text = GameManager.Instance.GetResult().ToString();
     }
 }

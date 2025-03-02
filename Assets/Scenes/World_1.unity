@@ -539,6 +539,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 496952977020207166, guid: 039a4e3d6ba583645ac0486bbccc6d8b, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 526.7
+      objectReference: {fileID: 0}
     - target: {fileID: 1560219801786807181, guid: 039a4e3d6ba583645ac0486bbccc6d8b, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -647,6 +651,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4257394605659934958, guid: 039a4e3d6ba583645ac0486bbccc6d8b, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 404.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4344516966544010093, guid: 039a4e3d6ba583645ac0486bbccc6d8b, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 330.1
+      objectReference: {fileID: 0}
     - target: {fileID: 4996885289438653476, guid: 039a4e3d6ba583645ac0486bbccc6d8b, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 306.03
@@ -691,7 +703,15 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6270233480539664448, guid: 039a4e3d6ba583645ac0486bbccc6d8b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6652483673477648057, guid: 039a4e3d6ba583645ac0486bbccc6d8b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8634520830152338485, guid: 039a4e3d6ba583645ac0486bbccc6d8b, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -1607,36 +1627,12 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 5556744834146557, guid: 950f2da174ef1044c9974147feb8d0cf, type: 3}
-      propertyPath: 'dialogueDatas.Array.data[0]'
+      propertyPath: text
       value: 
-      objectReference: {fileID: 11400000, guid: fd2c70b454358ed439d8ce191b1fb0d5, type: 2}
-    - target: {fileID: 5556744834146557, guid: 950f2da174ef1044c9974147feb8d0cf, type: 3}
-      propertyPath: 'dialogueDatas.Array.data[1]'
-      value: 
-      objectReference: {fileID: 11400000, guid: 61eb84eb0fa4e5747832eda5f8415e3e, type: 2}
-    - target: {fileID: 5556744834146557, guid: 950f2da174ef1044c9974147feb8d0cf, type: 3}
-      propertyPath: 'dialogueDatas.Array.data[2]'
-      value: 
-      objectReference: {fileID: 11400000, guid: 1a8b7c1b61861a7489e5af6f53a9dad1, type: 2}
-    - target: {fileID: 5556744834146557, guid: 950f2da174ef1044c9974147feb8d0cf, type: 3}
-      propertyPath: 'dialogueDatas.Array.data[3]'
-      value: 
-      objectReference: {fileID: 11400000, guid: aba4b829a2894284c99a445d147ff836, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 800260306682303007, guid: 950f2da174ef1044c9974147feb8d0cf, type: 3}
       propertyPath: m_Name
       value: Result_Canvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 3438374654635229783, guid: 950f2da174ef1044c9974147feb8d0cf, type: 3}
-      propertyPath: m_hasFontAssetChanged
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4351995166888160858, guid: 950f2da174ef1044c9974147feb8d0cf, type: 3}
-      propertyPath: defaultData
-      value: 
-      objectReference: {fileID: 11400000, guid: fd2c70b454358ed439d8ce191b1fb0d5, type: 2}
-    - target: {fileID: 4351995166888160858, guid: 950f2da174ef1044c9974147feb8d0cf, type: 3}
-      propertyPath: responseOptions
-      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 4918811848389721011, guid: 950f2da174ef1044c9974147feb8d0cf, type: 3}
       propertyPath: m_Pivot.x
@@ -1718,13 +1714,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6023464942553569680, guid: 950f2da174ef1044c9974147feb8d0cf, type: 3}
-      propertyPath: m_text
-      value: To Next Stage
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 1305149039088138931, guid: 950f2da174ef1044c9974147feb8d0cf, type: 3}
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 950f2da174ef1044c9974147feb8d0cf, type: 3}
