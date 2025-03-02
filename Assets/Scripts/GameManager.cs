@@ -81,7 +81,6 @@ public class GameManager : MonoBehaviour
         for (int i = 0; i < 10; i++)
         {
             collectedHints.Add(i, HintQuality.None);
-            CurrentStage = 0;
         }
     }
 

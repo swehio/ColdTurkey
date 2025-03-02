@@ -162,7 +162,8 @@ public class Dialogue : MonoBehaviour, IPointerClickHandler
     {
         if (index >= currentData.Strings.Length)
         {
-            GameManager.Instance.CollectHint(currentData.Index, currentData.HintQuality);
+            if (currentData.Index >= 0)
+                GameManager.Instance.CollectHint(currentData.Index, currentData.HintQuality);
 
             if (currentData.HintQuality != HintQuality.None)
             {

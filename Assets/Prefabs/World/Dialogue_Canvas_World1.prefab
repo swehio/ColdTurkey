@@ -1302,7 +1302,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1643581420989912694, guid: 51b5466362727e54ebb2685e5b1d080f, type: 3}
       propertyPath: onDialogueEnd.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1643581420989912694, guid: 51b5466362727e54ebb2685e5b1d080f, type: 3}
       propertyPath: onDialogueEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Mode

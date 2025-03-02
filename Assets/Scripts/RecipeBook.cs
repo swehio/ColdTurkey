@@ -28,7 +28,8 @@ public class RecipeBook : MonoBehaviour
 
     private void Start()
     {
-        for (int i = 0; i < recipeTexts.Length; i++)
+        int addAmount = GameManager.Instance.CurrentStage == 0 ? 0 : 5;
+        for (int i = addAmount; i < recipeTexts.Length + addAmount; i++)
         {
             if (GameManager.Instance.collectedHints[i] == HintQuality.None) continue;
             
