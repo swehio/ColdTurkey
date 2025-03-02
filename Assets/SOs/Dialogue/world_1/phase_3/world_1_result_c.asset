@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f77283b308520b4f87a9c28cd344b00, type: 3}
   m_Name: world_1_result_c
   m_EditorClassIdentifier: 
-  <Strings>k__BackingField: []
+  <Strings>k__BackingField:
+  - "\uCE74\uC790\uB4DC\uB460\uC758 \uC601\uC8FC\uB294 \uC57D\uC744 \uBA39\uACE0 "
   <Index>k__BackingField: 0
   <HintQuality>k__BackingField: 0
