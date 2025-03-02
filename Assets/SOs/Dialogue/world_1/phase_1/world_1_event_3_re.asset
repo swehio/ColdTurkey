@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6f77283b308520b4f87a9c28cd344b00, type: 3}
-  m_Name: world_1_event_3_b
+  m_Name: world_1_event_3_re
   m_EditorClassIdentifier: 
   <Strings>k__BackingField:
   - "\uC601\uC8FC\uB294 \uD63C\uD608\uC778 \uC790\uB4E4\uC744"
@@ -22,4 +22,4 @@ MonoBehaviour:
   - "\uC57D\uC744 \uC870\uD569\uD558\uB294 \uACFC\uC815\uC5D0\uC11C"
   - "\uAE30\uC874\uC758 \uADDC\uCE59\uC744 \uBC97\uC5B4\uB098\uAE30\uB3C4 \uD588\uC9C0..."
   <Index>k__BackingField: 2
-  <HintQuality>k__BackingField: 4
+  <HintQuality>k__BackingField: 5
