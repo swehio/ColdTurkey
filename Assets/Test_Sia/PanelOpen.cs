@@ -1,68 +1,83 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 
 public class PanelOpen : MonoBehaviour
 {
-    public GameObject optionPanel; // ¿É¼Ç ÆĞ³Î ¿¬°áÇÒ º¯¼ö
-    public GameObject savePanel; // ÀÌ¾îÇÏ±â ÆĞ³Î ¿¬°áÇÒ º¯¼ö
-    public GameObject exitPanel; // ÀÌ¾îÇÏ±â ÆĞ³Î ¿¬°áÇÒ º¯¼ö
-    public GameObject blockerPanel;   // Å¬¸¯ Â÷´Ü¿ë ÆĞ³Î
-    public GameObject menuPanel; // ¸Ş´º ÆĞ³Î ¿¬°áÇÒ º¯¼ö
+    public GameObject optionPanel; // ì˜µì…˜ íŒ¨ë„
+    public GameObject HowtoPanel; // ê²Œì„ë°©ë²• íŒ¨ë„
+    public GameObject exitPanel; // ì¢…ë£Œ íŒ¨ë„
+    public GameObject blockerPanel; // ì „ì²´ í´ë¦­ ì°¨ë‹¨ íŒ¨ë„
+    public GameObject menuPanel; // ë©”ë‰´ íŒ¨ë„
+    public GameObject InblockerPanel; // ë‚´ë¶€ í´ë¦­ ì°¨ë‹¨ íŒ¨ë„ (ë©”ë‰´ ë‚´ ë²„íŠ¼ìš©)
 
+    // ========== íƒ€ì´í‹€ ë²„íŠ¼ ========== 
     public void ToggleOptionMenu()
     {
         bool isActive = !optionPanel.activeSelf;
-        // ¿É¼Ç ÆĞ³ÎÀÇ È°¼º/ºñÈ°¼º »óÅÂ¸¦ ÀüÈ¯
-        blockerPanel.SetActive(isActive); // ÆĞ³ÎÀÌ ¿­¸± ¶§¸¸ Å¬¸¯ Â÷´Ü È°¼ºÈ­
+        blockerPanel.SetActive(isActive);
         optionPanel.SetActive(isActive);
-        savePanel.SetActive(false); // ÀÌ¾îÇÏ±â Ã¢Àº ´İÈû
-        exitPanel.SetActive(false); // Á¾·á Ã¢Àº ´İÈû
+        HowtoPanel.SetActive(false);
+        exitPanel.SetActive(false);
     }
-    public void ToggleSaveMenu()
+
+    public void ToggleHowtoMenu()
     {
-        bool isActive = !savePanel.activeSelf;
-        // °ÔÀÓ¹æ¹ı ÆĞ³ÎÀÇ È°¼º/ºñÈ°¼º »óÅÂ¸¦ ÀüÈ¯
-        blockerPanel.SetActive(isActive); // ÆĞ³ÎÀÌ ¿­¸± ¶§¸¸ Å¬¸¯ Â÷´Ü È°¼ºÈ­
-        savePanel.SetActive(isActive);
-        optionPanel.SetActive(false); // ¿É¼Ç Ã¢Àº ´İÈû
-        exitPanel.SetActive(false); // Á¾·á Ã¢Àº ´İÈû
+        bool isActive = !HowtoPanel.activeSelf;
+        blockerPanel.SetActive(isActive);
+        HowtoPanel.SetActive(isActive);
+        optionPanel.SetActive(false);
+        exitPanel.SetActive(false);
     }
+
     public void ToggleExitMenu()
     {
         bool isActive = !exitPanel.activeSelf;
-        // ¿É¼Ç ÆĞ³ÎÀÇ È°¼º/ºñÈ°¼º »óÅÂ¸¦ ÀüÈ¯
-        blockerPanel.SetActive(isActive); // ÆĞ³ÎÀÌ ¿­¸± ¶§¸¸ Å¬¸¯ Â÷´Ü È°¼ºÈ­
+        blockerPanel.SetActive(isActive);
         exitPanel.SetActive(isActive);
-        savePanel.SetActive(false); // ÀÌ¾îÇÏ±â Ã¢Àº ´İÈû
-        optionPanel.SetActive(false); // ¿É¼Ç Ã¢Àº ´İÈû
+        HowtoPanel.SetActive(false);
+        optionPanel.SetActive(false);
     }
+
     public void ToggleMenu()
     {
         bool isActive = !menuPanel.activeSelf;
-        // ¸Ş´º ÆĞ³ÎÀÇ È°¼º/ºñÈ°¼º »óÅÂ¸¦ ÀüÈ¯
-        blockerPanel.SetActive(isActive); // ÆĞ³ÎÀÌ ¿­¸± ¶§¸¸ Å¬¸¯ Â÷´Ü È°¼ºÈ­
+        blockerPanel.SetActive(isActive);
         menuPanel.SetActive(isActive);
-        //savePanel.SetActive(false); // ÀÌ¾îÇÏ±â Ã¢Àº ´İÈû
-        //optionPanel.SetActive(false); // ¿É¼Ç Ã¢Àº ´İÈû
     }
-    // ¿É¼Ç Ã¢ ´İ±â
+
+    // ========== ë©”ë‰´ ë‚´ë¶€ ë²„íŠ¼ ========== 
+    public void MenuOptionMenu()
+    {
+        bool isActive = !optionPanel.activeSelf;
+        blockerPanel.SetActive(isActive); // âœ… ì „ì²´ í´ë¦­ ì°¨ë‹¨
+        optionPanel.SetActive(isActive);
+    }
+
+    public void MenuExitMenu()
+    {
+        bool isActive = !exitPanel.activeSelf;
+        blockerPanel.SetActive(isActive); // âœ… ì „ì²´ í´ë¦­ ì°¨ë‹¨
+        exitPanel.SetActive(isActive);
+    }
+
+    // ========== íŒ¨ë„ ë‹«ê¸° ë²„íŠ¼ ========== 
     public void CloseOptionMenu()
     {
         optionPanel.SetActive(false);
-        blockerPanel.SetActive(false); // ´İÈú ¶§ Â÷´Ü ÇØÁ¦
+        blockerPanel.SetActive(false);
     }
 
-    // ÀÌ¾îÇÏ±â Ã¢ ´İ±â
-    public void CloseSaveMenu()
+    public void CloseHowtoMenu()
     {
-        savePanel.SetActive(false);
-        blockerPanel.SetActive(false); 
+        HowtoPanel.SetActive(false);
+        blockerPanel.SetActive(false);
     }
-    // Á¾·á Ã¢ ´İ±â
+
     public void CloseExitMenu()
     {
         exitPanel.SetActive(false);
-        blockerPanel.SetActive(false); 
+        blockerPanel.SetActive(false);
     }
+
     public void CloseMenu()
     {
         menuPanel.SetActive(false);
