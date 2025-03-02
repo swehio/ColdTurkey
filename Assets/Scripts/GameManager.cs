@@ -42,6 +42,15 @@ public class GameManager : MonoBehaviour
     int collectedHintCount;
     [SerializeField] int goalKeywordCount = 2;
 
+    [Button]
+    void TestHints( HintQuality hintQuality)
+    {
+        for (int i = 0; i < 5; i++)
+        {
+            collectedHints[i] =hintQuality;
+        }
+    }
+
     [Header(" - Craft - ")]
     [SerializeField] GameObject craftBtn;
 

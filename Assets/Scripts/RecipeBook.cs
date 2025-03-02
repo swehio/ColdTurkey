@@ -1,11 +1,18 @@
-﻿using UnityEngine;
-using UnityEngine.UI;
+﻿using System;
 using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
 
 public class RecipeBook : MonoBehaviour
 {
+    [Serializable]
+    public struct HintData
+    {
+        public DialogueData[] datas;
+    }
+
     public Text[] recipeTexts;
-    public GameManager gameManager; 
+    [SerializeField] HintData[] hintDatas;
 
     public Dictionary<int, Dictionary<int, Dictionary<HintQuality, string[]>>> stageHintTexts = new();
 
@@ -21,8 +28,22 @@ public class RecipeBook : MonoBehaviour
 
     private void Start()
     {
-        InitializeHintTexts(); 
-        UpdateRecipeUI();
+        for (int i = 0; i < recipeTexts.Length; i++)
+        {
+            if (GameManager.Instance.collectedHints[i] == HintQuality.None) continue;
+            
+            string temp = "";
+
+            for (int j = 0; j < (int)GameManager.Instance.collectedHints[i]; j++)
+            {
+                temp += hintDatas[i].datas[j].Strings[0] + "\n";
+            }
+
+            recipeTexts[i].text = temp;
+        }
+
+        /*        InitializeHintTexts();
+                UpdateRecipeUI();*/
     }
 
     private void InitializeHintTexts()
