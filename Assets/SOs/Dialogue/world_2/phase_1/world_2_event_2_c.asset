@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: world_2_event_2_c
   m_EditorClassIdentifier: 
   <Strings>k__BackingField:
-  - test
+  - "\uC544\uD558!"
+  - "'\uC544\uC778\uC2AC\uB808\uC774' \uC57D\uCD08\uB294 \uC815\uB9D0 \uD765\uBBF8\uB86D\uC9C0."
+  - "'\uC544\uC778\uC2AC\uB808\uC774' \uC57D\uCD08\uB294 \uC815\uB9D0 \uD765\uBBF8\uB86D\uC9C0."
   <Index>k__BackingField: 0
   <HintQuality>k__BackingField: 0

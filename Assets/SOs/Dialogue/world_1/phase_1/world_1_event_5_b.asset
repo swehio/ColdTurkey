@@ -10,10 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6f77283b308520b4f87a9c28cd344b00, type: 3}
-  m_Name: world_1_event_5_end
+  m_Name: world_1_event_5_b
   m_EditorClassIdentifier: 
   <Strings>k__BackingField:
-  - "\uC544\uC8FC \uC870\uAE08 \uB0A8\uC740 \uB9C8\uBC95\uC774"
-  - "\uBC18\uC9DD\uC774\uB2E4 \uC0AC\uB77C\uC838\uAC04\uB2E4."
+  - "...\uC774\uAC74 \uD669\uC81C\uC758 \uD544\uCCB4\uAC00 \uC544\uB2CC\uB370?"
+  - "\uAD49\uC7A5\uD788 \uC545\uD544\uC774\uAD70."
+  - ...
+  - "\uD558\uB098\uB294"
+  - "\uB118\uC5B4\uB3C4 \uB418\uC9C0\uB9CC \uAF49 \uCC28\uBA74 \uC548 \uB418\uACE0"
+  - "\uB610 \uB2E4\uB978 \uD558\uB098\uB294"
+  - "\uD544\uC694\uD558\uC9C0\uB9CC \uB118\uC73C\uBA74 \uC548 \uB41C\uB2E4\uB77C..."
+  - "\uC774\uAC74 \uB204\uAC00 \uC801\uC740 \uAC78\uAE4C?"
   <Index>k__BackingField: 0
   <HintQuality>k__BackingField: 0
