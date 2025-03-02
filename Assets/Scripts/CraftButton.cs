@@ -32,10 +32,12 @@ public class CraftButton : MonoBehaviour
         else if (hintCount >= 2 && hintCount<5)
         {
             dialogues[1].gameObject.SetActive(true);
+            FinalResult.CollectHintCount += hintCount;
         }
         else
         {
             dialogues[2].gameObject.SetActive(true);
+            FinalResult.CollectHintCount += hintCount;
         }
 
     }
