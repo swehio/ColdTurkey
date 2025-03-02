@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f77283b308520b4f87a9c28cd344b00, type: 3}
+  m_Name: world_2_event_2_a
+  m_EditorClassIdentifier: 
+  <Strings>k__BackingField:
+  - "\uC548\uB155!"
+  - "\uB09C \uB8E8\uC2DC\uC5D4\uC778\uB370"
+  - "\uC5EC\uAE30\uC11C \uBB50\uD558\uACE0 \uC788\uC5B4?"
+  - "\uB10C \uC57D\uCD08 \uB0C4\uC0C8\uAC00 \uB9CE\uC774 \uB09C\uB2E4."
+  - ...
+  - "\uB108, '\uC544\uC774\uC62C\uB8E8\uC2A4' \uC57D\uCD08\uB97C \uAC16\uACE0 \uC788\uB124!"
+  - "\uADF8\uAC70, \uC5D8\uD504\uB294 \uC808\uB300 \uBA39\uC5B4\uC120 \uC548 \uB418\uB294
+    \uAC70"
+  - "\uC54C\uACE0 \uC788\uC5B4?"
+  - "\uC5D8\uD504\uAC00 \uC544\uC774\uB864\uB85C\uC218\uB97C \uBA39\uC73C\uBA74"
+  - "\uC5C4\uCCAD\uB09C \uCD94\uC704\uC640 \uACE0\uD1B5\uC744 \uB290\uB07C\uBA70"
+  - "\uAD73\uC5B4 \uC788\uC5B4\uC57C \uD55C\uB2E4\uAD6C."
+  - "\uC0B0 \uCC44\uB85C \uAF41\uAF41 \uC5BC\uC5B4\uBC84\uB9AC\uB294 \uAC83\uACFC
+    \uAC19\uC9C0."
+  - "\uC0C1\uC0C1\uB9CC \uD574\uB3C4 \uACE0\uD1B5\uC2A4\uB7FD\uB124."
+  - "\uADF8\uB798\uB3C4 \uBB50, \uB2E4\uB978 \uC885\uC871\uC5D0\uAC8C\uB294"
+  - "\uC911\uC694\uD55C \uC57D\uC7AC\uC77C \uC218\uB3C4 \uC788\uC73C\uB2C8"
+  - "\uAC81 \uC8FC\uB294 \uAC74 \uC5EC\uAE30\uAE4C\uC9C0!"
+  - "\uC57D\uCD08 \uC774\uC57C\uAE30, \uC880 \uB354 \uB4E4\uB824\uC904\uAE4C?"
+  <Index>k__BackingField: 0
+  <HintQuality>k__BackingField: 0
