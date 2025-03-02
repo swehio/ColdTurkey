@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f77283b308520b4f87a9c28cd344b00, type: 3}
+  m_Name: world_2_event_1_b
+  m_EditorClassIdentifier: 
+  <Strings>k__BackingField:
+  - "\uC81C\uAC8C... \uC870\uC5B8\uC744 \uAD6C\uD558\uC2DC\uB2E4\uB2C8"
+  - "\uC5D8\uD504\uAC00 \uC544\uB2C8\uC2E0\uB370\uB3C4"
+  - "\uC57D\uCD08\uC5D0 \uB300\uD574 \uB9CE\uC774 \uC54C\uACE0 \uACC4\uC2DC\uACE0"
+  - "\uB610 \uADF8 \uC57D\uCD08\uB85C \uD2B9\uBCC4\uD55C \uC57D\uC7AC\uB97C \uB9CC\uB4DC\uB294"
+  - "\uC720\uC77C\uBB34\uC774\uD55C \uBD84\uC774 \uB9D0\uC785\uB2C8\uB2E4."
+  - "\uD48D\uBB38\uC5D0 \uB530\uB974\uBA74 \uC5D8\uD504\uB9C8\uC800 \uC720\uC2E4\uD55C"
+  - "\uC57D\uCD08 \uB18D\uCD95 \uBC0F \uC815\uC81C \uAE30\uC220\uC744"
+  - "\uC54C\uACE0 \uACC4\uC2DC\uB2E4\uACE0 \uD558\uB358\uB370\uC694."
+  - "\uD760... \uC0AC\uC124\uC774 \uAE38\uC5B4\uC84C\uAD70\uC694."
+  - "'\uC544\uC778\uC2AC\uB808\uC774' \uC57D\uCD08\uC5D0 \uB300\uD574 \uD55C \uAC00\uC9C0"
+  - "\uC870\uC5B8\uC744 \uB4DC\uB9AC\uB3C4\uB85D \uD558\uACA0\uC2B5\uB2C8\uB2E4."
+  - "\uC544\uBB34\uB798\uB3C4 \uC5D8\uD504\uAC00 \uC544\uB2CC \uBD84\uC740"
+  - "\uACBD\uD5D8\uD560 \uC218 \uC5C6\uB294 \uD6A8\uB2A5\uC774 \uC788\uC73C\uB2C8\uAE4C\uC694."
+  <Index>k__BackingField: 0
+  <HintQuality>k__BackingField: 2
