@@ -126,14 +126,6 @@ public class Dialogue : MonoBehaviour, IPointerClickHandler
 
         for (int charIndex = 0; charIndex < sentence.Length; charIndex++)
         {
-            if (char.IsPunctuation(sentence[charIndex]) &&
-                 sentence[charIndex] != '.' && sentence[charIndex] != '!'
-                 && sentence[charIndex] != '?' && sentence[charIndex] != ',')
-            {
-                currentText.Append(sentence[charIndex]);
-                continue;
-            }
-
             currentText.Append(sentence[charIndex]);
             text.text = currentText.ToString();
 
