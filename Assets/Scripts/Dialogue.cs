@@ -30,6 +30,7 @@ public class Dialogue : MonoBehaviour, IPointerClickHandler
         nextText.SetActive(value);
     }
 
+    [SerializeField] bool dontResetMouseinput;
 
     public UnityEvent onDialogueEnd;
 
@@ -57,7 +58,8 @@ public class Dialogue : MonoBehaviour, IPointerClickHandler
     {
         onDialogueEnd.RemoveAllListeners();
 
-        MouseInputManager.UseMouseInput = true;
+        if (!dontResetMouseinput)
+            MouseInputManager.UseMouseInput = true;
     }
 
     /*    private void Update()
@@ -162,7 +164,8 @@ public class Dialogue : MonoBehaviour, IPointerClickHandler
     {
         if (index >= currentData.Strings.Length)
         {
-            GameManager.Instance.CollectHint(currentData.Index, currentData.HintQuality);
+            if (currentData.Index >= 0)
+                GameManager.Instance.CollectHint(currentData.Index, currentData.HintQuality);
 
             if (currentData.HintQuality != HintQuality.None)
             {

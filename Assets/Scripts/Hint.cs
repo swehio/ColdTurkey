@@ -22,7 +22,7 @@ public class Hint : InteractableObject
     public override void OnPointerEnter()
     {
         base.OnPointerEnter();
-        transform.localScale = Vector3.one;
+        transform.localScale = Vector3.one * .9f;
     }
 
     public override void OnPointerExit()

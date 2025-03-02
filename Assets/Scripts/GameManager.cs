@@ -40,16 +40,10 @@ public class GameManager : MonoBehaviour
     [Header(" - Hint - ")]
     public Dictionary<int, HintQuality> collectedHints = new();
     int collectedHintCount;
+    public int GetCollectedHintCount() => collectedHintCount; 
+    public void AddCollectecHintCount(int collectedHintCount) => this.collectedHintCount += collectedHintCount;
     [SerializeField] int goalKeywordCount = 2;
 
-    [Button]
-    void TestHints( HintQuality hintQuality)
-    {
-        for (int i = 0; i < 5; i++)
-        {
-            collectedHints[i] =hintQuality;
-        }
-    }
 
     [Header(" - Craft - ")]
     [SerializeField] GameObject craftBtn;
@@ -75,12 +69,16 @@ public class GameManager : MonoBehaviour
         Init();
     }
 
+    private void OnApplicationQuit()
+    {
+        FinalResult.Reset();
+    }
+
     private void Init()
     {
         for (int i = 0; i < 10; i++)
         {
             collectedHints.Add(i, HintQuality.None);
-            CurrentStage = 0;
         }
     }
 
@@ -136,6 +134,8 @@ public class GameManager : MonoBehaviour
             {
                 results[0] = Result.A;
             }
+
+            FinalResult.Results[0] = results[0];
         }
         else
         {
@@ -163,6 +163,8 @@ public class GameManager : MonoBehaviour
             {
                 results[1] = Result.A;
             }
+
+            FinalResult.Results[1] = results[1];
         }
 
         resultCanvas.Init();
