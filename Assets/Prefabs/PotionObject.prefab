@@ -115,6 +115,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee0b5f3bf0e32814b902b43752fdfbaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  potionData:
+    icon: {fileID: 0}
+    ingredientCounts: 
+    hasPower: 0
+    hasPoison: 0
   tooltipFont: {fileID: 12800000, guid: 1c1aeb520ce94af48a873acfa6aae479, type: 3}
 --- !u!58 &-5844427959839405467
 CircleCollider2D:
