@@ -46,10 +46,9 @@ public class SubmitPotion : MonoBehaviour
 
                 Debug.Log($"Potion 제출됨!");
                 GameManager.Instance.SetPotion(PotionData);
+                Destroy(currentPotion);
+                currentPotion = null;
                 GameManager.Instance.MakeResult();
-                 Destroy(currentPotion);
-                 currentPotion = null;
-
                 GetComponentInParent<Canvas>().gameObject.SetActive(false);
             }
         }
