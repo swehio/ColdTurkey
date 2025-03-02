@@ -601,7 +601,7 @@ MonoBehaviour:
   dialogueData: {fileID: 11400000, guid: 7c0b7166a1f89a14296d84f5865292e8, type: 2}
   introText: {fileID: 1209737511}
   typingSpeed: 0.05
-  nextSceneName: 3_YSA_MenuPopup
+  nextSceneName: World_1
 --- !u!114 &1209737511
 MonoBehaviour:
   m_ObjectHideFlags: 0
