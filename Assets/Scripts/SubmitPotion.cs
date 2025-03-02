@@ -3,7 +3,7 @@ using UnityEngine.EventSystems;
 
 public class PotionReceiver : MonoBehaviour
 {
-    public GameManager gameManager;
+  //  public GameManager gameManager;
 
     public GameObject noPotionUI; 
     private GameObject currentPotion;
@@ -34,12 +34,12 @@ public class PotionReceiver : MonoBehaviour
     {
         if (currentPotion != null)
         {
-            Potion PotionData = currentPotion.GetComponent<Potion>();
+            Potion PotionData = currentPotion.GetComponent<PotionDisplay>().potionData;
 
             if (PotionData != null)
             {
                 Debug.Log($"Potion 제출됨!");
-                //gameManager.SetPotion(draggablePotion.potionData);
+                GameManager.Instance.SetPotion(PotionData);
                 Destroy(currentPotion); 
                 currentPotion = null; 
             }
