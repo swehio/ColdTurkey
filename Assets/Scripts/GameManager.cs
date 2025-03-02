@@ -44,6 +44,7 @@ public class GameManager : MonoBehaviour
 
     [Header(" - Result - ")]
     [SerializeField] Potion potion;
+    [SerializeField] ResultCanvas resultCanvas;
     public void SetPotion(Potion potion) => this.potion = potion;
     Result[] results = new Result[2];
     public Result GetResult() => results[CurrentStage];
@@ -90,6 +91,8 @@ public class GameManager : MonoBehaviour
 
     public void MakeResult()
     {
+
+
         bool[] passFails = new bool[7];
 
         if (CurrentStage == 0)
@@ -146,6 +149,8 @@ public class GameManager : MonoBehaviour
                 results[1] = Result.A;
             }
         }
+
+        resultCanvas.Init();
     }
 
     public EndingType GetEndingType()
