@@ -11,6 +11,7 @@ public class PotionCraftingSystem : MonoBehaviour
     public Transform potionSpawnPoint; // 약 생성 위치
     public Sprite[] potionSprites;
     public Text[] ingredientsInfo;
+    public Text CreatingWarning;
     public Image[] spriteImages;
 
     public Color activeColor = Color.white;
@@ -94,15 +95,23 @@ public class PotionCraftingSystem : MonoBehaviour
 
     public void CraftPotion()
     {
-        Sprite randomSprite = GetRandomSprite();
+        if(selectedIngredients.Length > 0)
+        {
+            Sprite randomSprite = GetRandomSprite();
 
-        int[] temp = new int[5];
-        selectedIngredients.CopyTo(temp, 0);
-        Potion craftedPotion = new Potion(randomSprite, temp, hasPower, hasPoison);
+            int[] temp = new int[5];
+            selectedIngredients.CopyTo(temp, 0);
+            Potion craftedPotion = new Potion(randomSprite, temp, hasPower, hasPoison);
 
-        DisplayPotionObject(craftedPotion);
+            DisplayPotionObject(craftedPotion);
 
-        ClearIngredients();
+            ClearIngredients();
+        }
+        else
+        {
+            CreatingWarning.text = "재료를 넣어주세요!"; 
+        }
+
     }
 
     public void ClearIngredients()
@@ -155,7 +164,4 @@ public class PotionCraftingSystem : MonoBehaviour
             potionDisplay.SetPotionData(potion); 
         }
     }
-
-
-
 }
