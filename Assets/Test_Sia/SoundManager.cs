@@ -90,7 +90,7 @@ public class SoundManager : MonoBehaviour
             case "2_YSA_Intro":
                 newBGM = introBGM;
                 break;
-            case "3_YSA_MenuPopup":
+            case "World_1":
                 newBGM = menuBGM;
                 break;
             default:
