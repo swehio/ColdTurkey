@@ -1,13 +1,12 @@
 ﻿using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class PotionReceiver : MonoBehaviour
 {
-  //  public GameManager gameManager;
+    //  public GameManager gameManager;
 
-    public GameObject noPotionUI; 
-    private GameObject currentPotion;
+    public GameObject noPotionUI;
+    private PotionDisplay currentPotion;
 
     private void Start()
     {
@@ -19,14 +18,17 @@ public class PotionReceiver : MonoBehaviour
     {
         if (other.CompareTag("Draggable"))
         {
-            PotionDisplay potionDisplay = other.GetComponent<PotionDisplay>();
-
-            if (potionDisplay != null)
+            if (other.TryGetComponent(out currentPotion))
             {
-                currentPotion = other.gameObject;
+                for (int i = 0; i < currentPotion.potionData.ingredientCounts.Length; i++)
+                {
+                    print(currentPotion.potionData.ingredientCounts[i]);
+                }
+
+
                 Debug.Log($"포션 감지됨: {currentPotion.name}");
             }
-            else 
+            else
             {
                 Debug.LogWarning("잘못된 아이템이 감지되었습니다!");
                 if (noPotionUI != null)
@@ -36,9 +38,9 @@ public class PotionReceiver : MonoBehaviour
 
                     if (messageText != null)
                     {
-                        messageText.text = "약이 아닙니다!"; 
+                        messageText.text = "약이 아닙니다!";
                     }
-                    Invoke("HideNoPotionUI", 2f); 
+                    Invoke("HideNoPotionUI", 2f);
                 }
             }
         }
@@ -46,7 +48,7 @@ public class PotionReceiver : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.gameObject == currentPotion)
+        if (other.gameObject == currentPotion.gameObject)
         {
             currentPotion = null;
         }
@@ -56,14 +58,23 @@ public class PotionReceiver : MonoBehaviour
     {
         if (currentPotion != null)
         {
-            Potion PotionData = currentPotion.GetComponent<PotionDisplay>().potionData;
+            Potion PotionData = currentPotion.potionData;
 
             if (PotionData != null)
             {
+                for (int i = 0; i < PotionData.ingredientCounts.Length; i++)
+                {
+                    print(PotionData.ingredientCounts[i]);
+                }
+
+
                 Debug.Log($"Potion 제출됨!");
                 GameManager.Instance.SetPotion(PotionData);
-                Destroy(currentPotion); 
-                currentPotion = null; 
+                GameManager.Instance.MakeResult();
+                // Destroy(currentPotion);
+                // currentPotion = null;
+
+                GetComponentInParent<Canvas>().gameObject.SetActive(false);
             }
         }
         else
@@ -77,7 +88,7 @@ public class PotionReceiver : MonoBehaviour
                 {
                     messageText.text = "제출할 약이 없습니다!";
                 }
-                Invoke("HideNoPotionUI", 2f); 
+                Invoke("HideNoPotionUI", 2f);
             }
         }
     }

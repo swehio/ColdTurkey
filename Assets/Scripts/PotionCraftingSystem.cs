@@ -7,7 +7,7 @@ public class PotionCraftingSystem : MonoBehaviour
     public int[] selectedIngredients = new int[5]; // 재료 + 개수
     public bool hasPower = false;  // 주인공 능력 사용 여부
     public bool hasPoison = false; // 독약 사용 여부
-    public GameObject potionPrefab; // 제조된 약 프리팹
+    public PotionDisplay potionPrefab; // 제조된 약 프리팹
     public Transform potionSpawnPoint; // 약 생성 위치
     public Sprite[] potionSprites;
     public Text[] ingredientsInfo;
@@ -40,8 +40,8 @@ public class PotionCraftingSystem : MonoBehaviour
 
         if (ingredient != null) 
         {
-            selectedIngredients[ingredient.ingredientNum]++; 
-            Debug.Log($"{ingredient.ingredientNum}이(가) 추가됨! 총 개수: {selectedIngredients[ingredient.ingredientNum]}");
+/*            selectedIngredients[ingredient.ingredientNum]++; 
+            Debug.Log($"{ingredient.ingredientNum}이(가) 추가됨! 총 개수: {selectedIngredients[ingredient.ingredientNum]}");*/
 
             spawnedIngredients.Add(other.gameObject);
             UpdateIngredientsInfo();
@@ -96,7 +96,9 @@ public class PotionCraftingSystem : MonoBehaviour
     {
         Sprite randomSprite = GetRandomSprite();
 
-        Potion craftedPotion = new Potion(randomSprite, selectedIngredients, hasPower, hasPoison);
+        int[] temp = new int[5];
+        selectedIngredients.CopyTo(temp, 0);
+        Potion craftedPotion = new Potion(randomSprite, temp, hasPower, hasPoison);
 
         DisplayPotionObject(craftedPotion);
 
@@ -146,9 +148,8 @@ public class PotionCraftingSystem : MonoBehaviour
             return;
         }
 
-        GameObject potionObject = Instantiate(potionPrefab, potionSpawnPoint.position, Quaternion.identity);
+        PotionDisplay potionDisplay = Instantiate(potionPrefab, potionSpawnPoint.position, Quaternion.identity);
 
-        PotionDisplay potionDisplay = potionObject.GetComponent<PotionDisplay>();
         if (potionDisplay != null)
         {
             potionDisplay.SetPotionData(potion); 

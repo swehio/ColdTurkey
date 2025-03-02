@@ -50,7 +50,7 @@ public class PotionDisplay : MonoBehaviour
         }
 
         tooltip = new GameObject("Tooltip");
-        tooltip.transform.SetParent(GameObject.Find("Canvas").transform, false);
+        tooltip.transform.SetParent(GameObject.Find("Craft_Canvas").transform, false);
 
         Image bg = tooltip.AddComponent<Image>();
         bg.color = new Color(0, 0, 0, 0.7f);
