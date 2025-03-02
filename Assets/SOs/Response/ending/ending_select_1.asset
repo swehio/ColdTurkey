@@ -9,10 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f77283b308520b4f87a9c28cd344b00, type: 3}
-  m_Name: ending_good_
+  m_Script: {fileID: 11500000, guid: 829a3e0747acc72409789bd1bb1c76e5, type: 3}
+  m_Name: ending_select_1
   m_EditorClassIdentifier: 
   <Strings>k__BackingField:
-  - 
-  <Index>k__BackingField: 0
-  <HintQuality>k__BackingField: 0
+  - "\uB0A8\uC740 \uB2F4\uBC30\uB97C \uBC84\uB9B0\uB2E4"
+  - "\uB2F4\uBC30\uB97C \uBC84\uB9AC\uC9C0 \uC54A\uB294\uB2E4"
