@@ -1776,6 +1776,10 @@ PrefabInstance:
       value: Result_Canvas
       objectReference: {fileID: 0}
     - target: {fileID: 3069851442837690179, guid: bf2ae6849b317574ab282fd474f50e90, type: 3}
+      propertyPath: isResult
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3069851442837690179, guid: bf2ae6849b317574ab282fd474f50e90, type: 3}
       propertyPath: defaultData
       value: 
       objectReference: {fileID: 11400000, guid: 9d3bdfac09e0074408e1b2caebcb5bd1, type: 2}

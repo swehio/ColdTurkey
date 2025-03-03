@@ -1679,6 +1679,10 @@ PrefabInstance:
       value: Result_Canvas
       objectReference: {fileID: 0}
     - target: {fileID: 4351995166888160858, guid: 950f2da174ef1044c9974147feb8d0cf, type: 3}
+      propertyPath: isResult
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4351995166888160858, guid: 950f2da174ef1044c9974147feb8d0cf, type: 3}
       propertyPath: onDialogueEnd.m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
