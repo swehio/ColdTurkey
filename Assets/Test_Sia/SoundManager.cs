@@ -15,7 +15,12 @@ public class SoundManager : MonoBehaviour
     [Header("🎶 BGM Clips")]
     public AudioClip titleBGM;  // 타이틀 씬 BGM
     public AudioClip introBGM;  // 인트로 씬 BGM
-    public AudioClip menuBGM;   // 메뉴 씬 BGM
+    public AudioClip world1BGM;  
+    public AudioClip world2BGM;  
+    public AudioClip happyEndBGM;   
+    public AudioClip normalEndBGM;   
+    public AudioClip badEndBGM;  
+
 
     [Header("🎛 볼륨 슬라이더")]
     [SerializeField] private Slider masterSlider;
@@ -91,8 +96,12 @@ public class SoundManager : MonoBehaviour
                 newBGM = introBGM;
                 break;
             case "World_1":
-                newBGM = menuBGM;
+                newBGM = world1BGM;
                 break;
+            case "World_2":
+                newBGM = world2BGM;
+                break;
+
             default:
                 Debug.LogWarning("해당 씬에 맞는 BGM이 없음.");
                 break;
