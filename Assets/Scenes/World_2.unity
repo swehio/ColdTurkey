@@ -127,6 +127,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2240859564830648669, guid: 1c17d7ecf43b8b147bf80741f3c5c82f, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2422411645246723308, guid: 1c17d7ecf43b8b147bf80741f3c5c82f, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -279,9 +283,17 @@ PrefabInstance:
       propertyPath: 'hintDatas.Array.data[4].datas.Array.data[1]'
       value: 
       objectReference: {fileID: 11400000, guid: 653695b65f79e144686412cfa8b7ba66, type: 2}
+    - target: {fileID: 5845373762651455929, guid: 1c17d7ecf43b8b147bf80741f3c5c82f, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8680108117246463873, guid: 1c17d7ecf43b8b147bf80741f3c5c82f, type: 3}
       propertyPath: m_UiScaleMode
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8731514751217285783, guid: 1c17d7ecf43b8b147bf80741f3c5c82f, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
