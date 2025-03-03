@@ -95,7 +95,17 @@ public class PotionCraftingSystem : MonoBehaviour
 
     public void CraftPotion()
     {
-        if(selectedIngredients.Length > 0)
+        bool allZero = true;
+        foreach (int count in selectedIngredients)
+        {
+            if (count > 0)
+            {
+                allZero = false;
+                break;
+            }
+        }
+
+        if (!allZero)
         {
             Sprite StageSprite;
             if (GameManager.Instance.CurrentStage == 0)
@@ -114,6 +124,8 @@ public class PotionCraftingSystem : MonoBehaviour
             DisplayPotionObject(craftedPotion);
 
             ClearIngredients();
+
+            CreatingWarning.text = "약 완성!";
         }
         else
         {
