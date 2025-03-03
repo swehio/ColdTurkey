@@ -29,13 +29,13 @@ public class RecipeBook : MonoBehaviour
     private void Start()
     {
         int addAmount = GameManager.Instance.CurrentStage == 0 ? 0 : 5;
-        for (int i = addAmount; i < recipeTexts.Length + addAmount; i++)
+        for (int i = 0; i < recipeTexts.Length; i++)
         {
-            if (GameManager.Instance.collectedHints[i] == HintQuality.None) continue;
+            if (GameManager.Instance.collectedHints[i+ addAmount] == HintQuality.None) continue;
             
             string temp = "";
 
-            for (int j = 0; j < (int)GameManager.Instance.collectedHints[i]; j++)
+            for (int j = 0; j < (int)GameManager.Instance.collectedHints[i + addAmount]; j++)
             {
                 temp += hintDatas[i].datas[j].Strings[0] + "\n";
             }
