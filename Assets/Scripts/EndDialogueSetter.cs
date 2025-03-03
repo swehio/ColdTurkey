@@ -9,6 +9,8 @@ public class EndDialogueSetter : MonoBehaviour
     [SerializeField] DialogueData[] dialogueDatas;
     Dialogue dialogue;
 
+    int index = 0;
+
     private void Awake()
     {
         collectedHintCount = FinalResult.CollectHintCount;
@@ -20,6 +22,8 @@ public class EndDialogueSetter : MonoBehaviour
     private void Start()
     {
         SetDialogue();
+        
+        SoundManager.instance.ChangeBGM(index);
     }
 
     void SetDialogue()
@@ -30,14 +34,20 @@ public class EndDialogueSetter : MonoBehaviour
                 dialogue.SetDialogue(dialogueDatas[2]);
             else
                 dialogue.SetDialogue(dialogueDatas[3]);
+
+            index = 2;
         }
         else if (results[0] == Result.D)
         {
             dialogue.SetDialogue(dialogueDatas[0]);
+
+            index = 2;
         }
         else if (results[1] == Result.D)
         {
             dialogue.SetDialogue(dialogueDatas[1]);
+
+            index = 2;
         }
         else if (results[0] == Result.C && results[1] == Result.C)
         {
@@ -45,14 +55,18 @@ public class EndDialogueSetter : MonoBehaviour
                 dialogue.SetDialogue(dialogueDatas[6]);
             else
                 dialogue.SetDialogue(dialogueDatas[7]);
+
+            index = 1;
         }
         else if (results[0] == Result.C)
         {
             dialogue.SetDialogue(dialogueDatas[4]);
+            index = 1;
         }
         else if (results[1] == Result.C)
         {
             dialogue.SetDialogue(dialogueDatas[5]);
+            index = 1;
         }
         else if (results[0] == Result.B || results[1] == Result.B)
         {

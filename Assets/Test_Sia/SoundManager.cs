@@ -126,6 +126,24 @@ public class SoundManager : MonoBehaviour
         }
     }
 
+    public void ChangeBGM(int index)
+    {
+        if(index == 0)
+        {
+            bgmSource.clip = happyEndBGM;
+        }
+        else if (index == 1)
+        {
+            bgmSource.clip = normalEndBGM;
+        }
+        else
+        {
+            bgmSource.clip = badEndBGM;
+        }
+
+        bgmSource.Play();
+    }
+
     private void ApplyVolume()
     {
         AudioListener.volume = masterVolume;
