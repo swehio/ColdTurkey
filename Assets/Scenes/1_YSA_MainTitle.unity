@@ -2744,9 +2744,9 @@ MonoBehaviour:
   introBGM: {fileID: 8300000, guid: b3a403089ad377841b2dcd80d2105d6f, type: 3}
   world1BGM: {fileID: 8300000, guid: 24d62eccf30e1b5479f4ff5a9a4b32df, type: 3}
   world2BGM: {fileID: 8300000, guid: 2aff62c90240d7f4c82c59fc91d66135, type: 3}
-  happyEndBGM: {fileID: 0}
-  normalEndBGM: {fileID: 0}
-  badEndBGM: {fileID: 0}
+  happyEndBGM: {fileID: 8300000, guid: bd4d02c0857c63c4da086ddd791008d1, type: 3}
+  normalEndBGM: {fileID: 8300000, guid: bd4d02c0857c63c4da086ddd791008d1, type: 3}
+  badEndBGM: {fileID: 8300000, guid: 4b8035582c1e4724da8a9f80af32eca0, type: 3}
   masterSlider: {fileID: 1696287725}
   bgmSlider: {fileID: 1112036833}
   sfxSlider: {fileID: 15906186}
