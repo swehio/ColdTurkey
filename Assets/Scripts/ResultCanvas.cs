@@ -12,6 +12,8 @@ public class ResultCanvas : MonoBehaviour
     {
         Result result = GameManager.Instance.GetResult();
 
+        print(result);
+
         TryGetComponent(out Canvas component);
         component.enabled = true;
 

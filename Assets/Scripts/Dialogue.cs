@@ -8,6 +8,7 @@ using UnityEngine.EventSystems;
 public class Dialogue : MonoBehaviour, IPointerClickHandler
 {
     public bool isInteractable = true;
+    public bool isResult = false;
 
     [SerializeField] DialogueData defaultData;
     [SerializeField] DialogueData endDialogueData;
@@ -45,7 +46,8 @@ public class Dialogue : MonoBehaviour, IPointerClickHandler
     {
         index = 0;
 
-        currentData = isFirstTime ? defaultData : endDialogueData;
+        if (!isResult)
+            currentData = isFirstTime ? defaultData : endDialogueData;
 
         isFirstTime = false;
 

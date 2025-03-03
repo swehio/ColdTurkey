@@ -15,7 +15,7 @@ public class IntroTextManager : MonoBehaviour
     public float typingSpeed = 0.05f; // 한 글자 출력 속도
 
     private int currentTextIndex = 0; // 현재 출력 중인 텍스트 인덱스
-    public string nextSceneName = "3_YSA_MenuPopup"; // 이동할 씬 이름 (나중에 변경 가능)
+    public string nextSceneName = "World_1"; // 이동할 씬 이름 (나중에 변경 가능)
 
     private void Start()
     {
