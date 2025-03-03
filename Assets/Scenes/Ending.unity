@@ -153,7 +153,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 688, y: -134}
+  m_AnchoredPosition: {x: 443, y: -414}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &430561588
@@ -341,6 +341,7 @@ GameObject:
   - component: {fileID: 829951703}
   - component: {fileID: 829951702}
   - component: {fileID: 829951701}
+  - component: {fileID: 829951704}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -422,6 +423,50 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &829951704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 829951700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_AllowHDROutput: 1
+  m_UseScreenCoordOverride: 0
+  m_ScreenSizeOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
+  m_TaaSettings:
+    m_Quality: 3
+    m_FrameInfluence: 0.1
+    m_JitterScale: 1
+    m_MipBias: 0
+    m_VarianceClampScale: 0.9
+    m_ContrastAdaptiveSharpening: 0
 --- !u!1 &893177181
 GameObject:
   m_ObjectHideFlags: 0
@@ -439,7 +484,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &893177182
 RectTransform:
   m_ObjectHideFlags: 0
@@ -628,12 +673,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 1
+  m_UiScaleMode: 0
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -721,8 +766,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -253.39}
-  m_SizeDelta: {x: 1524.02, y: 351.4}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1500, y: 1000}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1209737512
 CanvasRenderer:
@@ -752,7 +797,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: "\uBAA8\uB4E0 \uAC83\uC774 \uB05D\uB0AC\uC2B5\uB2C8\uB2E4.\n\n\uB354 \uC774\uC0C1
+    \uC9C4\uC2E4\uC740 \uC911\uC694\uD558\uC9C0 \uC54A\uC2B5\uB2C8\uB2E4.\n\uD669\uC81C\uC758
+    \uD3B8\uC5D0\uC11C \uC5F0\uD569\uC758 \uC8FC\uCD95\uC744 \uC774\uB8E8\uB358\n\uCE74\uC790\uB4DC\uB460,
+    \uC548\uB204\uBBF8\uB098\uC2A4\n\n\uB450 \uAE30\uB465\uC774 \uBAA8\uB450 \uBB34\uB108\uC9C0\uBA70\n\uC81C\uAD6D\uC740
+    \uD06C\uB098\uD070 \uD63C\uB780\uC5D0 \uBE60\uC84C\uC2B5\uB2C8\uB2E4.\n\uD669\uC81C\uAC00
+    \uC9C0\uD0A4\uACE0\uC790 \uD588\uB358 \uBAA8\uB4E0 \uAC83\uC774\n\uAC08\uAE30\uAC08\uAE30
+    \uCC22\uACA8 \uB098\uAC00\uACE0 \uC788\uC2B5\uB2C8\uB2E4."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0ec2f2b6d78fe454281fd3137d70704a, type: 2}
   m_sharedMaterial: {fileID: 7047570260746688449, guid: 0ec2f2b6d78fe454281fd3137d70704a, type: 2}
@@ -779,8 +830,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 50
+  m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

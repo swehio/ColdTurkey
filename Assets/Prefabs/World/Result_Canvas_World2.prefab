@@ -26,7 +26,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: fdce25000b137f74189979335db1179f, type: 2}
     - target: {fileID: 800260306682303007, guid: 950f2da174ef1044c9974147feb8d0cf, type: 3}
       propertyPath: m_Name
-      value: Result_Canvas Variant
+      value: Result_Canvas_World2
       objectReference: {fileID: 0}
     - target: {fileID: 3438374654635229783, guid: 950f2da174ef1044c9974147feb8d0cf, type: 3}
       propertyPath: m_hasFontAssetChanged
@@ -119,6 +119,22 @@ PrefabInstance:
     - target: {fileID: 4918811848389721011, guid: 950f2da174ef1044c9974147feb8d0cf, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5692904928984642926, guid: 950f2da174ef1044c9974147feb8d0cf, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5692904928984642926, guid: 950f2da174ef1044c9974147feb8d0cf, type: 3}
+      propertyPath: m_MatchWidthOrHeight
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5692904928984642926, guid: 950f2da174ef1044c9974147feb8d0cf, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 5692904928984642926, guid: 950f2da174ef1044c9974147feb8d0cf, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1080
       objectReference: {fileID: 0}
     - target: {fileID: 6023464942553569680, guid: 950f2da174ef1044c9974147feb8d0cf, type: 3}
       propertyPath: m_text

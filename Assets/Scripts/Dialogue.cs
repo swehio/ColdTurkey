@@ -49,7 +49,7 @@ public class Dialogue : MonoBehaviour, IPointerClickHandler
 
         isFirstTime = false;
 
-        interval = new WaitForSeconds(.1f);
+        interval = new WaitForSeconds(.05f);
         StartLetterByLetterDialogue();
 
         MouseInputManager.UseMouseInput = false;

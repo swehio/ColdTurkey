@@ -12,7 +12,7 @@ public class PotionDisplay : MonoBehaviour
     void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        CreateTooltip();
+        //CreateTooltip();
     }
 
     public void SetPotionData(Potion potion)
@@ -23,84 +23,85 @@ public class PotionDisplay : MonoBehaviour
         {
             spriteRenderer.sprite = potionData.icon;
         }
-        if (tooltip != null)
-        {
-            Text tooltipText = tooltip.GetComponentInChildren<Text>();
-            if (tooltipText != null)
-            {
-                tooltipText.text = $"포션 정보\n" +
-                                   $"Ingredients: {string.Join(", ", potionData.ingredientCounts)}\n" +
-                                   $"Has Power: {potionData.hasPower}\n" +
-                                   $"Has Poison: {potionData.hasPoison}";
-            }
-
-            tooltip.SetActive(false);
-        }
-        else
-        {
-            Debug.LogWarning(" PotionDisplay: tooltip이 생성되지 않았습니다!");
-        }
     }
+    //    if (tooltip != null)
+    //    {
+    //        Text tooltipText = tooltip.GetComponentInChildren<Text>();
+    //        if (tooltipText != null)
+    //        {
+    //            tooltipText.text = $"포션 정보\n" +
+    //                               $"Ingredients: {string.Join(", ", potionData.ingredientCounts)}\n" +
+    //                               $"Has Power: {potionData.hasPower}\n" +
+    //                               $"Has Poison: {potionData.hasPoison}";
+    //        }
 
-    private void CreateTooltip()
-    {
-        if (tooltip != null)
-        {
-            Destroy(tooltip);
-        }
+    //        tooltip.SetActive(false);
+    //    }
+    //    else
+    //    {
+    //        Debug.LogWarning(" PotionDisplay: tooltip이 생성되지 않았습니다!");
+    //    }
+    //}
 
-        tooltip = new GameObject("Tooltip");
-        tooltip.transform.SetParent(GameObject.Find("Craft_Canvas").transform, false);
+    //private void CreateTooltip()
+    //{
+    //    if (tooltip != null)
+    //    {
+    //        Destroy(tooltip);
+    //    }
 
-        Image bg = tooltip.AddComponent<Image>();
-        bg.color = new Color(0, 0, 0, 0.7f);
+    //    tooltip = new GameObject("Tooltip");
+    //    tooltip.transform.SetParent(GameObject.Find("Craft_Canvas").transform, false);
 
-        GameObject textObject = new GameObject("TooltipText");
-        textObject.transform.SetParent(tooltip.transform, false);
-        Text text = textObject.AddComponent<Text>();
-        text.font = tooltipFont;
-        text.color = Color.white;
-        text.alignment = TextAnchor.MiddleCenter;
+    //    Image bg = tooltip.AddComponent<Image>();
+    //    bg.color = new Color(0, 0, 0, 0.7f);
 
-        RectTransform bgRect = tooltip.GetComponent<RectTransform>();
-        bgRect.sizeDelta = new Vector2(200, 100); 
+    //    GameObject textObject = new GameObject("TooltipText");
+    //    textObject.transform.SetParent(tooltip.transform, false);
+    //    Text text = textObject.AddComponent<Text>();
+    //    text.font = tooltipFont;
+    //    text.color = Color.white;
+    //    text.alignment = TextAnchor.MiddleCenter;
 
-        RectTransform textRect = textObject.GetComponent<RectTransform>();
-        textRect.sizeDelta = new Vector2(180, 80);
+    //    RectTransform bgRect = tooltip.GetComponent<RectTransform>();
+    //    bgRect.sizeDelta = new Vector2(200, 100); 
 
-        tooltip.SetActive(false); 
-    }
+    //    RectTransform textRect = textObject.GetComponent<RectTransform>();
+    //    textRect.sizeDelta = new Vector2(180, 80);
 
-    private void OnMouseEnter()
-    {
-        if (tooltip != null)
-        {
-            tooltip.SetActive(true);
-            tooltip.transform.position = Camera.main.WorldToScreenPoint(transform.position + Vector3.up * 1.5f);
-        }
-    }
+    //    tooltip.SetActive(false); 
+    //}
 
-    private void OnMouseExit()
-    {
-        if (tooltip != null)
-        {
-            tooltip.SetActive(false);
-        }
-    }
+    //private void OnMouseEnter()
+    //{
+    //    if (tooltip != null)
+    //    {
+    //        tooltip.SetActive(true);
+    //        tooltip.transform.position = Camera.main.WorldToScreenPoint(transform.position + Vector3.up * 1.5f);
+    //    }
+    //}
 
-    private void OnMouseDown()
-    {
-        if (tooltip != null)
-        {
-            tooltip.SetActive(false);
-        }
-    }
+    //private void OnMouseExit()
+    //{
+    //    if (tooltip != null)
+    //    {
+    //        tooltip.SetActive(false);
+    //    }
+    //}
 
-    private void OnDestroy()
-    {
-        if (tooltip != null)
-        {
-            Destroy(tooltip);
-        }
-    }
+    //private void OnMouseDown()
+    //{
+    //    if (tooltip != null)
+    //    {
+    //        tooltip.SetActive(false);
+    //    }
+    //}
+
+    //private void OnDestroy()
+    //{
+    //    if (tooltip != null)
+    //    {
+    //        Destroy(tooltip);
+    //    }
+    //}
 }

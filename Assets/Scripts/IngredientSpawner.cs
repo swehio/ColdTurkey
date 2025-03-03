@@ -6,7 +6,7 @@ public class IngredientSpawner : MonoBehaviour
 
     public Ingredient ingredientPrefab;
     public Transform spawnPoint;
-    public float spawnRadius = 7f;
+    public float spawnRadius = 5f;
 
     public void SetIngredientPrefab(Ingredient newPrefab)
     {
