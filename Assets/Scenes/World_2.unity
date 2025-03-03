@@ -279,6 +279,10 @@ PrefabInstance:
       propertyPath: 'hintDatas.Array.data[4].datas.Array.data[1]'
       value: 
       objectReference: {fileID: 11400000, guid: 653695b65f79e144686412cfa8b7ba66, type: 2}
+    - target: {fileID: 8680108117246463873, guid: 1c17d7ecf43b8b147bf80741f3c5c82f, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -546,11 +550,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5653158809845187850, guid: 14f980eb01f06724fa3aef5048011164, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.07
+      value: -1.64
       objectReference: {fileID: 0}
     - target: {fileID: 5653158809845187850, guid: 14f980eb01f06724fa3aef5048011164, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.13
+      value: 1.43
       objectReference: {fileID: 0}
     - target: {fileID: 5653158809845187850, guid: 14f980eb01f06724fa3aef5048011164, type: 3}
       propertyPath: m_ConstrainProportionsScale
@@ -867,6 +871,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1422517743042076951, guid: 51f67118421724c4fa786a24c3a24631, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1712463249451012534, guid: 51f67118421724c4fa786a24c3a24631, type: 3}
+      propertyPath: m_UiScaleMode
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2265001813943102572, guid: 51f67118421724c4fa786a24c3a24631, type: 3}
@@ -1420,6 +1428,10 @@ PrefabInstance:
       propertyPath: m_SizeDelta.x
       value: 598.8
       objectReference: {fileID: 0}
+    - target: {fileID: 7230270424049991974, guid: a2643950fba24b04f97784ee357a00e2, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7300431647153366986, guid: a2643950fba24b04f97784ee357a00e2, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -1709,6 +1721,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: MainMenu_Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 7143334982508133238, guid: d9952ca316a54e74496fb5c9a368f08c, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7143334982508133238, guid: d9952ca316a54e74496fb5c9a368f08c, type: 3}
+      propertyPath: m_MatchWidthOrHeight
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7143334982508133238, guid: d9952ca316a54e74496fb5c9a368f08c, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 7143334982508133238, guid: d9952ca316a54e74496fb5c9a368f08c, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1080
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1849,6 +1877,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5961649095240712874, guid: bf2ae6849b317574ab282fd474f50e90, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6484739030283537527, guid: bf2ae6849b317574ab282fd474f50e90, type: 3}
+      propertyPath: m_UiScaleMode
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7616590436027584884, guid: bf2ae6849b317574ab282fd474f50e90, type: 3}
