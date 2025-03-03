@@ -215,6 +215,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Craft_Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 2986430279250649445, guid: 1c17d7ecf43b8b147bf80741f3c5c82f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5103170924812923418, guid: 1c17d7ecf43b8b147bf80741f3c5c82f, type: 3}
       propertyPath: hintDatas.Array.data[0].datas.Array.size
       value: 3
