@@ -2742,7 +2742,11 @@ MonoBehaviour:
   sfxSource: {fileID: 1086530808}
   titleBGM: {fileID: 8300000, guid: b3a403089ad377841b2dcd80d2105d6f, type: 3}
   introBGM: {fileID: 8300000, guid: b3a403089ad377841b2dcd80d2105d6f, type: 3}
-  menuBGM: {fileID: 8300000, guid: 24d62eccf30e1b5479f4ff5a9a4b32df, type: 3}
+  world1BGM: {fileID: 8300000, guid: 24d62eccf30e1b5479f4ff5a9a4b32df, type: 3}
+  world2BGM: {fileID: 8300000, guid: 2aff62c90240d7f4c82c59fc91d66135, type: 3}
+  happyEndBGM: {fileID: 0}
+  normalEndBGM: {fileID: 0}
+  badEndBGM: {fileID: 0}
   masterSlider: {fileID: 1696287725}
   bgmSlider: {fileID: 1112036833}
   sfxSlider: {fileID: 15906186}

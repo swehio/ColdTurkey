@@ -5,14 +5,14 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Test_Sia/1_YSA_MainTitle.unity
+  - enabled: 1
+    path: Assets/Scenes/1_YSA_MainTitle.unity
     guid: 1bd09bcf6fa33f943b3a036d1a3f38bd
-  - enabled: 0
-    path: Assets/Test_Sia/2_YSA_Intro.unity
+  - enabled: 1
+    path: Assets/Scenes/2_YSA_Intro.unity
     guid: fb05678e9189cf24f99c16aaad2440d3
   - enabled: 0
-    path: Assets/Test_Sia/3_YSA_MenuPopup.unity
+    path: Assets/Scenes/3_YSA_MenuPopup.unity
     guid: b5981368712c1cf4eb6348a9bfff4e9f
   - enabled: 1
     path: Assets/Scenes/World_1.unity
